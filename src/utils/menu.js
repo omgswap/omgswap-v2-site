@@ -4,12 +4,12 @@ const menu = [
     sublinks: [
       {
         name: 'App',
-        link: 'https://dapp.omgswap.com/',
+        link: 'https://bapp.omgswap.com/',
         description: 'Swap BEP20 tokens and supply liquidity'
       },
       {
         name: 'Analytics',
-        link: 'https://omgswap.link/',
+        link: 'http://info.omgswap.link/',
         description: 'OMGSwap BEP20 analytics and historical data'
       }
     ]
@@ -60,6 +60,7 @@ const menu = [
     sublinks: [
       { name: 'Twitter', link: 'https://twitter.com/omegadefi' },
       { name: 'Telegram', link: 'https://t.me/omegadefi' },
+      { name: 'Reddit', link: 'https://www.reddit.com/r/omegaprotocol/' },
       { name: 'LinkedIn', link: 'https://www.linkedin.com/company/opldefi' }
     ]
   },
