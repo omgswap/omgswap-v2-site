@@ -18,7 +18,7 @@ As an example, let's try to represent DAI in a format the SDK can work with. To 
 
 The first two pieces of data — **chainId** and **token address** — must be provided by us. Thinking about it, this makes sense, as there's really no other way to unambiguously identify a token.
 
-So, in the case of DAI, we know that the **chainId** is `1` (we're on mainnet), and the **token address** is `0x6B175474E89094C44Da98b954EedeAC495271d0F`. Note that it's very important to externally verify token addresses. Don't use addresses from sources you don't trust!
+So, in the case of DAI, we know that the **chainId** is `1` (we're on mainnet), the DAI (ERC20) **token address** is `0x6B175474E89094C44Da98b954EedeAC495271d0F` and DAI (BEPC20) **token address** is `0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3`. Note that it's very important to externally verify token addresses. Don't use addresses from sources you don't trust!
 
 ## Required Data
 
@@ -28,8 +28,10 @@ The next piece of data we need is **decimals**.
 
 One option here is to simply pass in the correct value, which we may know is `18`. At this point, we're ready to represent DAI as a <Link to='/docs/v2/SDK/token'>Token</Link>:
 
+Ethereum Chain:
+
 ```typescript
-import { ChainId, Token } from '@uniswap/sdk'
+import { ChainId, Token } from '@omgswap/sdk'
 
 const chainId = ChainId.MAINNET
 const tokenAddress = '0x6B175474E89094C44Da98b954EedeAC495271d0F' // must be checksummed
@@ -38,10 +40,34 @@ const decimals = 18
 const DAI = new Token(chainId, tokenAddress, decimals)
 ```
 
-If we don't know or don't want to hardcode the value, we could look it up ourselves via any method of retrieving on-chain data in a function that looks something like:
+Binance Smart Chain:
 
 ```typescript
-import { ChainId } from '@uniswap/sdk'
+import { ChainId, Token } from '@omgswap/bsc-sdk'
+
+const chainId = ChainId.MAINNET
+const tokenAddress = '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3' // must be checksummed
+const decimals = 18
+
+const DAI = new Token(chainId, tokenAddress, decimals)
+```
+
+If we don't know or don't want to hardcode the value, we could look it up ourselves via any method of retrieving on-chain data in a function that looks something like:
+
+Ethereum Chain:
+
+```typescript
+import { ChainId } from '@omgswap/sdk'
+
+async function getDecimals(chainId: ChainId, tokenAddress: string): Promise<number> {
+  // implementation details
+}
+```
+
+Binance Smart Chain:
+
+```typescript
+import { ChainId } from '@omgswap/bsc-sdk'
 
 async function getDecimals(chainId: ChainId, tokenAddress: string): Promise<number> {
   // implementation details
@@ -52,8 +78,10 @@ async function getDecimals(chainId: ChainId, tokenAddress: string): Promise<numb
 
 If we don't want to provide or look up the value ourselves, we can ask the SDK to look it up for us with <Link to='/docs/v2/SDK/fetcher#fetchtokendata'>Fetcher.fetchTokenData</Link>:
 
+Ethereum Chain:
+
 ```typescript
-import { ChainId, Token, Fetcher } from '@uniswap/sdk'
+import { ChainId, Token, Fetcher } from '@omgswap/sdk'
 
 const chainId = ChainId.MAINNET
 const tokenAddress = '0x6B175474E89094C44Da98b954EedeAC495271d0F' // must be checksummed
@@ -63,7 +91,20 @@ const tokenAddress = '0x6B175474E89094C44Da98b954EedeAC495271d0F' // must be che
 const DAI: Token = await Fetcher.fetchTokenData(chainId, tokenAddress)
 ```
 
-By default, this method will use the [default provider defined by ethers.js](https://docs.ethers.io/v5/api/providers/#providers-getDefaultProvider). 
+Binance Smart Chain:
+
+```typescript
+import { ChainId, Token, Fetcher } from '@omgswap/sdk'
+
+const chainId = ChainId.MAINNET
+const tokenAddress = '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3' // must be checksummed
+
+// note that you may want/need to handle this async code differently,
+// for example if top-level await is not an option
+const DAI: Token = await Fetcher.fetchTokenData(chainId, tokenAddress)
+```
+
+By default, this method will use the [default provider defined by ethers.js](https://docs.ethers.io/v5/api/providers/#providers-getDefaultProvider).
 If you're already using ethers.js in your application, you may pass in your provider as a 3rd argument.
 If you're using another library, you'll have to fetch the data separately.
 
@@ -71,8 +112,10 @@ If you're using another library, you'll have to fetch the data separately.
 
 Finally, we can talk about **symbol** and **name**. Because these fields aren't used anywhere in the SDK itself, they're optional, and can be provided if you want to use them in your application. However, the SDK will not fetch them for you, so you'll have to provide them:
 
+Ethereum Chain:
+
 ```typescript
-import { ChainId, Token } from '@uniswap/sdk'
+import { ChainId, Token } from '@omgswap/sdk'
 
 const DAI = new Token(
   ChainId.MAINNET,
@@ -86,7 +129,7 @@ const DAI = new Token(
 or:
 
 ```typescript
-import { ChainId, Token, Fetcher } from '@uniswap/sdk'
+import { ChainId, Token, Fetcher } from '@omgswap/sdk'
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option
@@ -99,9 +142,39 @@ const DAI = await Fetcher.fetchTokenData(
 )
 ```
 
+Binance Smart Chain:
+
+```typescript
+import { ChainId, Token } from '@omgswap/bsc-sdk'
+
+const DAI = new Token(
+  ChainId.MAINNET,
+  '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3',
+  18,
+  'DAI',
+  'Dai Token'
+)
+```
+
+or:
+
+```typescript
+import { ChainId, Token, Fetcher } from '@omgswap/bsc-sdk'
+
+// note that you may want/need to handle this async code differently,
+// for example if top-level await is not an option
+const DAI = await Fetcher.fetchTokenData(
+  ChainId.MAINNET,
+  '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3',
+  undefined,
+  'DAI',
+  'Dai Token'
+)
+```
+
 # Case 2: Pairs
 
-Now that we've explored how to define a token, let's talk about pairs. To read more about what Uniswap pairs are, see <Link to='/docs/v2/smart-contracts/pair'>Pair</Link>.
+Now that we've explored how to define a token, let's talk about pairs. To read more about what OMGSwap pairs are, see <Link to='/docs/v2/smart-contracts/pair'>Pair</Link>.
 
 As an example, let's try to represent the DAI-WETH pair.
 
@@ -117,8 +190,10 @@ The data we need is the _reserves_ of the pair. To read more about reserves, see
 
 One option here is to simply pass in values which we've fetched ourselves to create a <Link to='/docs/v2/SDK/pair'>Pair</Link>:
 
+Ethereum Chain:
+
 ```typescript
-import { ChainId, Token, WETH, Pair, TokenAmount } from '@uniswap/sdk'
+import { ChainId, Token, WETH, Pair, TokenAmount } from '@omgswap/sdk'
 
 const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
 
@@ -136,20 +211,55 @@ async function getPair(): Promise<Pair> {
 }
 ```
 
+Binance Smart Chain:
+
+```typescript
+import { ChainId, Token, WBNB, Pair, TokenAmount } from '@omgswap/bsc-sdk'
+
+const DAI = new Token(ChainId.MAINNET, '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3', 18)
+
+async function getPair(): Promise<Pair> {
+  const pairAddress = Pair.getAddress(DAI, WBNB[DAI.chainId])
+
+  const reserves = [/* use pairAddress to fetch reserves here */]
+  const [reserve0, reserve1] = reserves
+
+  const tokens = [DAI, WBNB[DAI.chainId]]
+  const [token0, token1] = tokens[0].sortsBefore(tokens[1]) ? tokens : [tokens[1], tokens[0]]
+
+  const pair = new Pair(new TokenAmount(token0, reserve0), new TokenAmount(token1, reserve1))
+  return pair
+}
+```
+
 Note that these values can change as frequently as every block, and should be kept up-to-date.
 
 ### Fetched by the SDK
 
 If we don't want to look up the value ourselves, we can ask the SDK to look them up for us with <Link to='/docs/v2/SDK/fetcher#fetchpairdata'>Fetcher.fetchPairData</Link>:
 
+Ethereum Chain:
+
 ```typescript
-import { ChainId, Token, WETH, Fetcher } from '@uniswap/sdk'
+import { ChainId, Token, WETH, Fetcher } from '@omgswap/sdk'
 
 const DAI = new Token(ChainId.MAINNET, '0x6B175474E89094C44Da98b954EedeAC495271d0F', 18)
 
 // note that you may want/need to handle this async code differently,
 // for example if top-level await is not an option
 const pair = await Fetcher.fetchPairData(DAI, WETH[DAI.chainId])
+```
+
+Binance Smart Chain:
+
+```typescript
+import { ChainId, Token, WBNB, Fetcher } from '@omgswap/bsc-sdk'
+
+const DAI = new Token(ChainId.MAINNET, '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3', 18)
+
+// note that you may want/need to handle this async code differently,
+// for example if top-level await is not an option
+const pair = await Fetcher.fetchPairData(DAI, WBNB[DAI.chainId])
 ```
 
 By default, this method will use the [default provider defined by ethers.js](https://docs.ethers.io/v5/api/providers/#providers-getDefaultProvider). If you're already using ethers.js in your application, you may pass in your provider as a 3rd argument. If you're using another library, you'll have to fetch the data separately.

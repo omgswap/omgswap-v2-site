@@ -28,10 +28,29 @@ Thanks to some [fancy footwork in the factory](https://github.com/Uniswap/uniswa
 
 ### Typescript
 
-This example makes use of the <Link to='docs/v2/SDK/getting-started'>Uniswap SDK</Link>. In reality, the SDK computes pair addresses behind the scenes, obviating the need to compute them manually like this.
+This example makes use of the <Link to='docs/v2/SDK/getting-started'>OMGSwap SDK</Link>. In reality, the SDK computes pair addresses behind the scenes, obviating the need to compute them manually like this.
+
+Ethereum Chain:
 
 ```typescript
-import { FACTORY_ADDRESS, INIT_CODE_HASH } from '@uniswap/sdk'
+import { FACTORY_ADDRESS, INIT_CODE_HASH } from '@omgswap/sdk'
+import { pack, keccak256 } from '@ethersproject/solidity'
+import { getCreate2Address } from '@ethersproject/address'
+
+const token0 = '0xCAFE000000000000000000000000000000000000' // change me!
+const token1 = '0xF00D000000000000000000000000000000000000' // change me!
+
+const pair = getCreate2Address(
+  FACTORY_ADDRESS,
+  keccak256(['bytes'], [pack(['address', 'address'], [token0, token1])]),
+  INIT_CODE_HASH'
+)
+```
+
+Binance Smart Chain:
+
+```typescript
+import { FACTORY_ADDRESS, INIT_CODE_HASH } from '@omgswap/bsc-sdk'
 import { pack, keccak256 } from '@ethersproject/solidity'
 import { getCreate2Address } from '@ethersproject/address'
 

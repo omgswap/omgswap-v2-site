@@ -1,10 +1,10 @@
 ---
-title: Uniswap Documentation
+title: OMGSwap Documentation
 ---
 
-Welcome! The pages that follow contain comprehensive documentation of the Uniswap V2 ecosystem. If you are new to Uniswap, you might want to check out the <Link to="/docs/v2/protocol-overview">Protocol Overview</Link> or <Link to="/faq">FAQ</Link> first.
+Welcome! The pages that follow contain comprehensive documentation of the OMGSwap V2 ecosystem. If you are new to OMGSwap, you might want to check out the <Link to="/docs/v2/protocol-overview">Protocol Overview</Link> or <Link to="/faq">FAQ</Link> first.
 
-For a high-level overview of V2, see the <Link to='/blog/uniswap-v2'>introductory blog post</Link>.
+For a high-level overview of V2, see the <Link to='/blog/omgswap-v2'>introductory blog post</Link>.
 
 ## Getting Started
 
@@ -14,16 +14,23 @@ Explore the sidebar to find more specific documentation covering other aspects o
 
 ## Developer links
 
-The Uniswap codebase is comprised of an ecosystem of open source components.
+The OMGSwap codebase is comprised of an ecosystem of open source components.
 
-- [`uniswap-v2-core`](https://github.com/Uniswap/uniswap-v2-core)
-- [`uniswap-v2-periphery`](https://github.com/Uniswap/uniswap-v2-periphery)
-- [`uniswap-frontend`](https://github.com/Uniswap/uniswap-frontend)
-- [`uniswap-sdk`](https://github.com/Uniswap/uniswap-sdk)
+Ethereum Chain:
+- [`omgswap-v2-core`](https://github.com/omgswap/uniswap-v2-core)
+- [`omgswap-v2-periphery`](https://github.com/omgswap/uniswap-v2-periphery)
+- [`omgswap-frontend`](https://github.com/omgswap/omgswap-frontend)
+- [`omgswap-sdk`](https://github.com/omgswap/omgswap-sdk)
+
+Binance Smart Chain:
+- [`omgswap-v2-core`](https://github.com/omgswap/uniswap-v2-core)
+- [`omgswap-v2-periphery`](https://github.com/omgswap/uniswap-v2-periphery)
+- [`omgswap-frontend`](https://github.com/omgswap/omgswap-frontend)
+- [`omgswap-sdk`](https://github.com/omgswap/omgswap-bsc-sdk)
 
 ## Reference materials
 
-Get to know the Uniswap SDK and smart contract API objects, methods, attributes, and responses.
+Get to know the OMGSwap SDK and smart contract API objects, methods, attributes, and responses.
 
 - <Link to="/docs/v2/SDK">SDK</Link>
 - <Link to="/docs/v2/API">API</Link>
@@ -32,4 +39,4 @@ Get to know the Uniswap SDK and smart contract API objects, methods, attributes,
 
 ### Developer community
 
-Join the Uniswap developer community on [Discord](https://discord.gg/XErMcTq).
+Join the OMGSwap developer community on [Telegram](https://t.me/omegadefi).

@@ -9,6 +9,7 @@ import BG from '../components/bg'
 import MiniCard from '../components/minicard'
 import Wizard from '../components/wizard'
 import { Button } from '../components/button'
+import Discord from '../images/discord.inline.svg'
 
 const StyledBody = styled.div`
   position: relative;
@@ -203,7 +204,6 @@ const IndexPage = props => {
 
   return (
     <Layout path={props.location.pathname}>
-      <Ticker />
       <BG />
       <SEO
         title="Home"
@@ -553,7 +553,7 @@ const ProductsSection2 = props => {
         <MiniCard
           href="https://omgswap.link"
           image={props.data.socks.childImageSharp.fluid}
-          desc={'OMGSwap bApp Analytics'}
+          desc={'bApp Analytics'}
           backgroundColor={'#DAA520'}
           color={'white'}
         />
@@ -589,7 +589,7 @@ const ProductsSection = props => {
         <MiniCard
           href="https://omgswap.link"
           image={props.data.socks.childImageSharp.fluid}
-          desc={'OMGSwap App Analytics'}
+          desc={'App Analytics'}
           backgroundColor={'#009685'}
           color={'white'}
         />
