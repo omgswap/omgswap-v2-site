@@ -226,6 +226,7 @@ const IndexPage = props => {
         </StyledTitle>
         <SummarySection data={data} />
         <DeveloperSection data={data} />
+        <ProductsSection2 data={data} />
         <ProductsSection data={data} />
         <GoalSection />
       </StyledBody>
@@ -286,25 +287,6 @@ const MiniNewInfo = styled(Link)`
     width: 100%;
     height: 100%;
     margin: 4rem 0;
-  }
-`
-
-const NewPill = styled.span`
-  float: left;
-  color: ${({ theme }) => theme.invertedTextColor};
-  background-color: ${({ theme }) => theme.textColor};
-  padding: 0rem 0.75rem;
-  border-radius: 0.5em;
-  text-align: center;
-  margin: 0;
-  margin-right: 1rem;
-  font-weight: 400;
-`
-
-const LinkTitle = styled.span`
-  @media (max-width: 960px) {
-    flex: 0 0 100%;
-    max-width: 100%;
   }
 `
 
@@ -551,35 +533,64 @@ const DeveloperSection = () => {
   )
 }
 
-const ProductsSection = props => {
+const ProductsSection2 = props => {
   return (
     <>
       <StyledSectionFlex style={{ paddingBottom: '0px' }}>
-        <StyledGoal style={{ width: '100%', maxWidth: '450px' }}>
-          <h1>Use OMGSwap</h1>
+        <StyledGoal style={{ width: '100%' }}>
+          <h1>Use Binance Smart Chain (BEP20) OMGSwap bApp</h1>
           <p>We build open tools and experimental products that interact with the Omega protocol.</p>
         </StyledGoal>
       </StyledSectionFlex>
       <StyledSectionFlex wrapSmall={false} style={{ paddingTop: '2rem' }}>
         <MiniCard
-          href="https://omgswap.com"
-          title={'OMGSwap Interface'}
+          href="https://bapp.omgswap.com"
           image={props.data.swap.childImageSharp.fluid}
-          desc={'Trade tokens, add liquidity and create new pools.'}
-        />
-        <MiniCard
-          href="https://"
-          title={'Omega DEX'}
-          image={props.data.info.childImageSharp.fluid}
-          desc={'Exchange REC20 tokens and Get loans.'}
-          backgroundColor={'#009685'}
+          desc={'OMGSwap bApp'}
+          backgroundColor={'#DAA520'}
+          color={'white'}
         />
         <MiniCard
           href="https://omgswap.link"
-          title={'OMGSwap Info'}
           image={props.data.socks.childImageSharp.fluid}
-          desc={'In depth Omega protocol market data.'}
-          backgroundColor={'#000000'}
+          desc={'OMGSwap bApp Analytics'}
+          backgroundColor={'#DAA520'}
+          color={'white'}
+        />
+      </StyledSectionFlex>
+    </>
+  )
+}
+
+const ProductsSection = props => {
+  return (
+    <>
+      <StyledSectionFlex style={{ paddingBottom: '0px' }}>
+        <StyledGoal style={{ width: '100%' }}>
+          <h1>Use Ethereum (ERC20) OMGSwap App</h1>
+          <p>We build open tools and experimental products that interact with the Omega protocol.</p>
+        </StyledGoal>
+      </StyledSectionFlex>
+      <StyledSectionFlex wrapSmall={false} style={{ paddingTop: '2rem' }}>
+        <MiniCard
+          href="https://app.omgswap.com"
+          image={props.data.swap.childImageSharp.fluid}
+          desc={'OMGSwap App'}
+          backgroundColor={'#009685'}
+          color={'white'}
+        />
+        <MiniCard
+          href="https://"
+          image={props.data.info.childImageSharp.fluid}
+          desc={'Omega Exchange'}
+          backgroundColor={'#009685'}
+          color={'white'}
+        />
+        <MiniCard
+          href="https://omgswap.link"
+          image={props.data.socks.childImageSharp.fluid}
+          desc={'OMGSwap App Analytics'}
+          backgroundColor={'#009685'}
           color={'white'}
         />
       </StyledSectionFlex>

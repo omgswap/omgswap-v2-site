@@ -6,7 +6,7 @@ import styled from 'styled-components'
 const StyledMiniCards = styled.a`
   padding: 1.5rem;
   color: ${({ theme, outlined }) => (outlined ? theme.colors.link : theme.textColor)};
-  width: 300px;
+  width: 200px;
   height: ${({ small }) => (small ? '160px' : '320px')};
   max-width: 450px;
   margin: 1rem;
@@ -55,12 +55,6 @@ const StyledMiniCardDesc = styled.p`
   font-size: 1rem;
   line-height: 140%;
   font-weight: 400;
-`
-
-const StyledArrow = styled.span`
-  position: absolute;
-  left: 1.5rem;
-  bottom: 1rem;
 `
 
 const MiniCard = props => {

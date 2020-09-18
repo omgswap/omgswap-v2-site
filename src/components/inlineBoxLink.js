@@ -57,12 +57,6 @@ const StyledMiniCardDesc = styled.p`
   font-weight: 400;
 `
 
-const StyledArrow = styled.span`
-  position: absolute;
-  right: 1.5rem;
-  top: 1rem;
-`
-
 const InlineCard = props => {
   return (
     <StyledBoxLink {...props} style={{ backgroundColor: props.backgroundColor, color: props.color }} to={props.to}>
