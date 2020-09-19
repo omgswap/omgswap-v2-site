@@ -20,7 +20,7 @@ import Coinex from '../images/partners/coinex.png'
 import Hotbit from '../images/partners/hotbit.png'
 import Probit from '../images/partners/probit.png'
 import Indoex from '../images/partners/indoex.png'
-//import OMGSwap from '../images/partners/OMGSwap.png'
+import Uniswap from '../images/partners/uniwap.png'
 
 const StyledBody = styled.div`
   position: relative;
@@ -658,7 +658,7 @@ const GoalSection = () => {
           <img src={Indoex} alt="Indoex" height="48"/>
         </ColT>
         <ColT>
-          <img src={OMGSwap} alt="OMGSwap" height="48"/>
+          <img src={Uniswap} alt="OMGSwap" height="48"/>
         </ColT>
       </Row>
       <Row>
