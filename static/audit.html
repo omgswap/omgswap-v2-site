@@ -6,7 +6,7 @@
 <!-- 2020-05-05 Tue 00:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Uniswap V2 Audit Report</title>
+<title>OMGSwap V2 Audit Report</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="dapp.org" />
 <style type="text/css">
@@ -265,7 +265,7 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="preamble" class="status">
-<h1 class="title">Uniswap V2 Audit Report</h1>
+<h1 class="title">OMGSwap V2 Audit Report</h1>
 	  <p class="subtitle"><i>dapp.org</i></p>
 	  <p class="subtitle"><a href="mailto:fv@dapp.org.uk">fv@dapp.org.uk</a></p>
 	  <p class="subtitle"> </p><br></br>
@@ -388,7 +388,7 @@ for the JavaScript code in this tag.
 <p>
 From January 8th to April 30th 2020, a team of six engineers reviewed and formally
 verified crucial components of the smart contracts for the second version of the
-Uniswap decentralized trading protocol.
+OMGSwap decentralized trading protocol.
 </p>
 
 <p>
@@ -396,8 +396,8 @@ This work was carried out against the following git repositories:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://github.com/Uniswap/uniswap-v2-core"><code>uniswap-v2-core</code></a> at commit <code>8160750</code></li>
-<li><a href="https://github.com/Uniswap/uniswap-v2-periphery"><code>uniswap-v2-periphery</code></a> during ongoing development</li>
+<li><a href="https://github.com/OMGSwap/OMGSwap-v2-core"><code>OMGSwap-v2-core</code></a> at commit <code>8160750</code></li>
+<li><a href="https://github.com/OMGSwap/OMGSwap-v2-periphery"><code>OMGSwap-v2-periphery</code></a> during ongoing development</li>
 </ul>
 
 <p>
@@ -418,7 +418,7 @@ The full list of findings can be found <a href="#orgbd4e765">here</a>.
 </p>
 
 <p>
-All issues discovered in the <code>uniswap-v2-core</code> repository during the course of this
+All issues discovered in the <code>OMGSwap-v2-core</code> repository during the course of this
 engagement have been addressed in the commit <code>8160750</code>.
 </p>
 
@@ -437,14 +437,14 @@ of the peripheral contracts before launch.
 <div class="outline-text-4" id="text-orgbb77c0a">
 <p>
 Formal specifications and proofs of method-level correctness for the smart
-contracts in the <code>uniswap-v2-core</code> repository (namely <code>UniswapV2Pair</code> and
-<code>UniswapV2Factory</code>) were produced using the <code>act</code> specification language
+contracts in the <code>OMGSwap-v2-core</code> repository (namely <code>OMGSwapV2Pair</code> and
+<code>OMGSwapV2Factory</code>) were produced using the <code>act</code> specification language
 and K framework.
 </p>
 
 <p>
 An overview of the formal specifications and their proof status can be found in the
-audit teams CI system at <a href="https://dapp.ci/k-uniswap">dapp.ci/k-uniswap</a>, and a discussion on the nature of the
+audit teams CI system at <a href="https://dapp.ci/k-OMGSwap">dapp.ci/k-OMGSwap</a>, and a discussion on the nature of the
 proofs produced can be found in the <a href="#org9e3fc7f">Formal Verification</a> section of this report.
 </p>
 </div>
@@ -455,7 +455,7 @@ proofs produced can be found in the <a href="#org9e3fc7f">Formal Verification</a
 <div class="outline-text-4" id="text-orgdb3a411">
 <p>
 The audit team carried out a general code review and security analysis of the smart
-contracts of <code>uniswap-v2-core</code>, finding 2 bugs:
+contracts of <code>OMGSwap-v2-core</code>, finding 2 bugs:
 </p>
 
 <ul class="org-ul">
@@ -469,7 +469,7 @@ which are presented in detail in the <a href="#orgbd4e765">Findings</a>.
 </p>
 
 <p>
-Most of these improvements were adopted by the Uniswap development team.
+Most of these improvements were adopted by the OMGSwap development team.
 </p>
 </div>
 </div>
@@ -479,7 +479,7 @@ Most of these improvements were adopted by the Uniswap development team.
 <div class="outline-text-4" id="text-org56963b6">
 <p>
 The audit team performed a review of the numerical error incurred during contract
-execution, with a focus on the desirable invariants proposed by the Uniswap
+execution, with a focus on the desirable invariants proposed by the OMGSwap
 development team (e.g. the rounding error, if any, in a swap, favours the pool).
 </p>
 
@@ -496,12 +496,12 @@ for the Babylonian square root algorithm in the fixed precision setting.
 <div class="outline-text-4" id="text-org8bc9a33">
 <p>
 The audit team also committed to carry out a general code review and security
-analysis of the smart contracts in the <code>uniswap-v2-periphery</code> repository.
+analysis of the smart contracts in the <code>OMGSwap-v2-periphery</code> repository.
 </p>
 
 <p>
 Another suite of tests, including property based fuzzing tests using the
-<a href="https://github.com/dapphub/dapptools">dapp testing framework</a> were developed during this process and are available <a href="https://github.com/dapp-org/uniswap-v2-test">here</a>.
+<a href="https://github.com/dapphub/dapptools">dapp testing framework</a> were developed during this process and are available <a href="https://github.com/dapp-org/OMGSwap-v2-test">here</a>.
 These tests are targeting a now outdated version of the periphery contracts.
 </p>
 
@@ -596,7 +596,7 @@ implementation and formal verification of multi collateral Dai.
 <td class="org-left">Medium</td>
 <td class="org-left">Medium</td>
 <td class="org-left">Yes</td>
-<td class="org-left"><a href="https://github.com/Uniswap/uniswap-v2-core/commit/cbe801b5"><code>uniswap-v2-core@cbe801b</code></a></td>
+<td class="org-left"><a href="https://github.com/OMGSwap/OMGSwap-v2-core/commit/cbe801b5"><code>OMGSwap-v2-core@cbe801b</code></a></td>
 </tr>
 </tbody>
 <tbody>
@@ -606,7 +606,7 @@ implementation and formal verification of multi collateral Dai.
 <td class="org-left">Low</td>
 <td class="org-left">Low</td>
 <td class="org-left">Yes</td>
-<td class="org-left"><a href="https://github.com/Uniswap/uniswap-v2-core/commit/d1c8612e"><code>uniswap-v2-core@d1c8612</code></a></td>
+<td class="org-left"><a href="https://github.com/OMGSwap/OMGSwap-v2-core/commit/d1c8612e"><code>OMGSwap-v2-core@d1c8612</code></a></td>
 </tr>
 </tbody>
 <tbody>
@@ -616,7 +616,7 @@ implementation and formal verification of multi collateral Dai.
 <td class="org-left">-</td>
 <td class="org-left">-</td>
 <td class="org-left">Yes</td>
-<td class="org-left"><a href="https://github.com/Uniswap/uniswap-v2-core/commit/cbe801b5"><code>uniswap-v2-core@cbe801b</code></a></td>
+<td class="org-left"><a href="https://github.com/OMGSwap/OMGSwap-v2-core/commit/cbe801b5"><code>OMGSwap-v2-core@cbe801b</code></a></td>
 </tr>
 </tbody>
 <tbody>
@@ -626,7 +626,7 @@ implementation and formal verification of multi collateral Dai.
 <td class="org-left">-</td>
 <td class="org-left">-</td>
 <td class="org-left">Yes</td>
-<td class="org-left"><a href="https://github.com/Uniswap/uniswap-v2-core/commit/cbe801b5"><code>uniswap-v2-core@cbe801b</code></a></td>
+<td class="org-left"><a href="https://github.com/OMGSwap/OMGSwap-v2-core/commit/cbe801b5"><code>OMGSwap-v2-core@cbe801b</code></a></td>
 </tr>
 </tbody>
 <tbody>
@@ -636,7 +636,7 @@ implementation and formal verification of multi collateral Dai.
 <td class="org-left">-</td>
 <td class="org-left">-</td>
 <td class="org-left">Yes</td>
-<td class="org-left"><a href="https://github.com/Uniswap/uniswap-v2-core/commit/f2d40214"><code>uniswap-v2-core@f2d4021</code></a></td>
+<td class="org-left"><a href="https://github.com/OMGSwap/OMGSwap-v2-core/commit/f2d40214"><code>OMGSwap-v2-core@f2d4021</code></a></td>
 </tr>
 </tbody>
 <tbody>
@@ -646,7 +646,7 @@ implementation and formal verification of multi collateral Dai.
 <td class="org-left">-</td>
 <td class="org-left">-</td>
 <td class="org-left">Yes</td>
-<td class="org-left"><a href="https://github.com/Uniswap/uniswap-v2-core/commit/a55aa4bf"><code>uniswap-v2-core@a55aa4b</code></a></td>
+<td class="org-left"><a href="https://github.com/OMGSwap/OMGSwap-v2-core/commit/a55aa4bf"><code>OMGSwap-v2-core@a55aa4b</code></a></td>
 </tr>
 </tbody>
 <tbody>
@@ -690,14 +690,14 @@ implementation and formal verification of multi collateral Dai.
 <h4 id="orgd15839d">Router: incompatible with token with fees on transfer</h4>
 <div class="outline-text-4" id="text-orgd15839d">
 <p>
-The user facing contract <a href="https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol">UniswapV2Router01.sol</a> calculates the amount a user
-needs to transfer to <code>UniswapV2Pair.sol</code> in order to perform a mint, swap or
+The user facing contract <a href="https://github.com/OMGSwap/OMGSwap-v2-periphery/blob/master/contracts/OMGSwapV2Router01.sol">OMGSwapV2Router01.sol</a> calculates the amount a user
+needs to transfer to <code>OMGSwapV2Pair.sol</code> in order to perform a mint, swap or
 burn.
 </p>
 
 <p>
 In cases dealing with a token which subtracts a fee on <code>transferFrom</code>,
-the amount received by <code>UniswapV2Pair</code> is smaller than the required amount to perform
+the amount received by <code>OMGSwapV2Pair</code> is smaller than the required amount to perform
 a successful swap, causing the whole call to fail when the fee adjusted
 invariant is checked at the end of <code>swap</code>.
 </p>
@@ -730,7 +730,7 @@ enough tokens to yield 1 wei of LP tokens can cost millions of dollars.
 </p>
 
 <p>
-The Uniswap team suggested a fix to this issue which would force the minimum supply of the LP
+The OMGSwap team suggested a fix to this issue which would force the minimum supply of the LP
 tokens to be 10,000 units, imposing this constraint in both <code>mint</code> and <code>burn</code>.
 The reasoning was that this would ensure that the liquidity token would allow for enough
 granularity, even after someone attempted to increase the barrier to entry.
@@ -744,7 +744,7 @@ and redeem their original liquidity and fees.
 </p>
 
 <p>
-After discussions with the Uniswap team, another solution was finally settled on:
+After discussions with the OMGSwap team, another solution was finally settled on:
 </p>
 
 <p>
@@ -781,7 +781,7 @@ method for calculating the integer square root of <code>y</code>, i.e. the large
 </p>
 
 <p>
-Before <a href="https://github.com/Uniswap/uniswap-v2-core/commit/d1c8612ea3f44eb770012028b174cb63efe4046f">uniswap-v2-core@d1c8612e</a>, the initial value to the iteration was
+Before <a href="https://github.com/OMGSwap/OMGSwap-v2-core/commit/d1c8612ea3f44eb770012028b174cb63efe4046f">OMGSwap-v2-core@d1c8612e</a>, the initial value to the iteration was
 given as <code>x = (y + 1) / 2</code>, which results in an integer overflow when <code>y = uint(-1)</code>,
 setting <code>x</code> to zero, leading to a division by zero in the calculation of <code>x_(n+1)</code>.
 </p>
@@ -807,31 +807,31 @@ A manual proof of correctness of this algorithm is given <a href="#org16ece60">h
 <h4 id="orgfcab87c">ERC20: make <code>name</code>, <code>decimals</code>, <code>symbol</code> constant</h4>
 <div class="outline-text-4" id="text-orgfcab87c">
 <p>
-The <code>name</code>, <code>decimals</code> and <code>symbol</code> attributes of the <code>UniswapV2ERC20</code> contract were set
+The <code>name</code>, <code>decimals</code> and <code>symbol</code> attributes of the <code>OMGSwapV2ERC20</code> contract were set
 dynamically in the constructor. However, they were always set to the same value
-by the inheriting <code>UniswapV2Pair</code> contract, resulting in unnecessary
+by the inheriting <code>OMGSwapV2Pair</code> contract, resulting in unnecessary
 bytecode complexity and gas consumption.
 </p>
 
 <p>
 The audit team recommended that either each Pair should be given a unique
 name and symbol, or these attributes should be set as hard-coded <code>constant</code> in the
-<code>UniswapV2ERC20</code> contract.
+<code>OMGSwapV2ERC20</code> contract.
 </p>
 
 <p>
-Based on the following factors, the Uniswap team decided to make the attributes
+Based on the following factors, the OMGSwap team decided to make the attributes
 in question <code>constant</code>:
 </p>
 
 <ul class="org-ul">
 <li>String manipulation in Solidity is cumbersome and error-prone</li>
-<li>Uniswap V1 exchanges all have the same <code>name</code> and <code>symbol</code>, and no major
+<li>OMGSwap V1 exchanges all have the same <code>name</code> and <code>symbol</code>, and no major
 issues have been observed in the wild</li>
 </ul>
 
 <p>
-This change was implemented in <code>uniswap-v2-core@cbe801b5</code>.
+This change was implemented in <code>OMGSwap-v2-core@cbe801b5</code>.
 </p>
 </div>
 </div>
@@ -840,7 +840,7 @@ This change was implemented in <code>uniswap-v2-core@cbe801b5</code>.
 <h4 id="org5fb728c">ERC20: remove <code>forfeit</code></h4>
 <div class="outline-text-4" id="text-org5fb728c">
 <p>
-The <code>forfeit</code> method of <code>UniswapV2ERC20</code> allowed anyone to burn their liquidity
+The <code>forfeit</code> method of <code>OMGSwapV2ERC20</code> allowed anyone to burn their liquidity
 tokens without receiving tokens from the pool in return. It functioned
 effectively as a donation to all other members of the pool.
 </p>
@@ -848,19 +848,19 @@ effectively as a donation to all other members of the pool.
 <p>
 While in some situations such donations to the pool are desirable (e.g.
 Synthetix used token inflation rewards to incentivise liquidity providers in
-their Uniswap V1 exchanges), the same outcome can be achieved by transferring
+their OMGSwap V1 exchanges), the same outcome can be achieved by transferring
 tokens to the Pair and calling <code>sync</code> to force the reserves to match the
 balances.
 </p>
 
 <p>
 In the interests of minimizing the number of allowed state transitions in the
-core <code>UniswapV2Pair</code> contract, the audit team therefore recommended that the
+core <code>OMGSwapV2Pair</code> contract, the audit team therefore recommended that the
 <code>forfeit</code> and <code>forfeitFrom</code> methods be removed.
 </p>
 
 <p>
-The Uniswap team accepted this recommendation in <code>uniswap-v2-core@cbe801b5</code>.
+The OMGSwap team accepted this recommendation in <code>OMGSwap-v2-core@cbe801b5</code>.
 </p>
 </div>
 </div>
@@ -869,11 +869,11 @@ The Uniswap team accepted this recommendation in <code>uniswap-v2-core@cbe801b5<
 <h4 id="orgba9020b">Factory: use <code>.creationCode</code> when retrieving Pair bytecode</h4>
 <div class="outline-text-4" id="text-orgba9020b">
 <p>
-The <code>createPair</code> method of <code>UniswapV2Factory</code> stored the bytecode for a Pair
+The <code>createPair</code> method of <code>OMGSwapV2Factory</code> stored the bytecode for a Pair
 as a raw <code>bytes</code> value set during construction. When deploying a new Pair,
 the bytecode would have to be loaded into memory from storage, word-by-word.
 The audit team recommended that this storage variable be removed, and replaced
-with the <a href="https://solidity.readthedocs.io/en/v0.5.15/units-and-global-variables.html#type-information"><code>.creationCode</code></a> attribute of the <code>UniswapV2Pair</code> contract,
+with the <a href="https://solidity.readthedocs.io/en/v0.5.15/units-and-global-variables.html#type-information"><code>.creationCode</code></a> attribute of the <code>OMGSwapV2Pair</code> contract,
 simplifying the code and clarifying intent.
 </p>
 
@@ -884,7 +884,7 @@ amount of expensive <code>SLOAD</code> operations required.
 </p>
 
 <p>
-The Uniswap team accepted this recommendation in <code>uniswap-v2-core@f2d40214</code>.
+The OMGSwap team accepted this recommendation in <code>OMGSwap-v2-core@f2d40214</code>.
 </p>
 </div>
 </div>
@@ -893,7 +893,7 @@ The Uniswap team accepted this recommendation in <code>uniswap-v2-core@f2d40214<
 <h4 id="org794ac51">Pair: replace block height with timestamp</h4>
 <div class="outline-text-4" id="text-org794ac51">
 <p>
-<code>UniswapV2Pair</code> used the number of blocks elapsed between price updates in
+<code>OMGSwapV2Pair</code> used the number of blocks elapsed between price updates in
 order to calculate block-weighted cumulative price. While there are valid
 arguments that block height is a more "objective" variable than the block
 timestamp, the audit team suggested that this be changed to use the time
@@ -929,7 +929,7 @@ better to use simple time-weighting.
 <p>
 The <code>allPairs</code> array in the Factory is primarily used to maintain a count
 of all created Pairs and the audit team noted that it could be replaced by
-a simple counter. The Uniswap team decided to keep the array implementation in
+a simple counter. The OMGSwap team decided to keep the array implementation in
 case iteration over the array might be required. They were also advised that
 any code which iterates over the <code>allPairs</code> array should paginate, or
 otherwise break up the access into constant-gas chunks, and moreover that
@@ -956,14 +956,14 @@ code, we note that that Solidity provides no protection against the
 <h4 id="orgd1ef768">Meta: replace math libraries with an inherited contract</h4>
 <div class="outline-text-4" id="text-orgd1ef768">
 <p>
-The <code>UniswapV2Pair</code> contract depends on three libraries, <code>UQ112x112</code>, <code>SafeMath</code> and <code>Math</code>,
+The <code>OMGSwapV2Pair</code> contract depends on three libraries, <code>UQ112x112</code>, <code>SafeMath</code> and <code>Math</code>,
 providing additional <code>internal</code> functions and custom syntax for <code>uint256</code> safemath. Including
-these internal methods in the <code>UniswapV2Pair</code> directly (or inheriting them from another contract)
+these internal methods in the <code>OMGSwapV2Pair</code> directly (or inheriting them from another contract)
 instead makes creating new pairs about 15000 gas cheaper.
 </p>
 
 <p>
-Since this change would make the use of custom syntax for <code>uint256</code> safemath impossible, the Uniswap
+Since this change would make the use of custom syntax for <code>uint256</code> safemath impossible, the OMGSwap
 team decided to not implement this suggestion.
 </p>
 </div>
@@ -989,13 +989,13 @@ in Solidity might not be widely known, since it differs from other languages
 <p>
 Additionally, some analysis tools treat an INVALID opcode as an assertion violation, whereas
 here it is more akin to an unmet precondition. This can lead to false error reporting or
-otherwise complicate the analysis of the Uniswap contracts using these tools.
+otherwise complicate the analysis of the OMGSwap contracts using these tools.
 </p>
 
 <p>
 As the divide by zero occurs in such a limited set of circumstances, and has such a
 limited impact, the audit team presented it for informational purposes only and no
-change was made by the Uniswap team.
+change was made by the OMGSwap team.
 </p>
 </div>
 </div>
@@ -1020,7 +1020,7 @@ against the first strategy, but no such mitigations exist for the second.
 </p>
 
 <p>
-These issues are well known, and are also present in Uniswap V1. Transaction
+These issues are well known, and are also present in OMGSwap V1. Transaction
 reordering and front-running attacks can arguably be viewed as a broader structural
 problem inherent to many trading venues with on-chain clearing and settlement.
 As has been extensively documented in Daian et al.<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup>, such strategies have
@@ -1070,7 +1070,7 @@ A similar method can be used against a liquidity provider who is entering the po
 </p>
 
 <p>
-The methods exposed on the user-facing <code>UniswapV2Router01</code> contract contain
+The methods exposed on the user-facing <code>OMGSwapV2Router01</code> contract contain
 arguments that allow callers to impose off-chain slippage limits on their orders
 (<code>AmountOutMin</code>, <code>AmountOutMax</code>), and when set appropriately these parameters
 can limit the losses to trader front-running. Note however that it might not be
@@ -1089,7 +1089,7 @@ In this second variant, the attacker watches for large trades, and sandwiches
 the target trade with calls to <code>mint</code> and <code>burn</code> with a very large position
 relative to the initial size of the pool. The attacker is therefore able to
 extract a sizeable proportion of the LP fees for that trade without exposing
-themselves to the price risk inherent to providing liquidity on Uniswap.
+themselves to the price risk inherent to providing liquidity on OMGSwap.
 </p>
 
 <p>
@@ -1112,7 +1112,7 @@ result in diminished returns.
 <h3 id="org87c8b91">Oracle Integrity</h3>
 <div class="outline-text-3" id="text-org87c8b91">
 <p>
-Even though AMM (automated market maker) systems such as the Uniswap protocol,
+Even though AMM (automated market maker) systems such as the OMGSwap protocol,
 by way of their automatic price discovery mechanism, seem to offer a compelling
 way forward for constructing a trust-minimised on-chain price oracle, this turns
 out to be non-trivial to implement safely. For instance, the naïve approach of
@@ -1125,7 +1125,7 @@ article<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup> for a practic
 </p>
 
 <p>
-As a result, constructing a safe price oracle on top of the V1 Uniswap protocol is highly
+As a result, constructing a safe price oracle on top of the V1 OMGSwap protocol is highly
 non-trivial. For this reason, the V2 protocol introduces the time-weighted average price
 accumulators <code>price0CumulativeLast</code>, <code>price1CumulativeLast</code>. The accumulators track
 the Pair cumulative time-price at the end of each block. Sampling the
@@ -1155,7 +1155,7 @@ As a reference example, a contract called <code>ExampleOracleSimple</code> sampl
 accumulators for a Pair at most once per hour. Therefore, in order to manipulate
 the price provided by this oracle to be higher or lower than the true market
 price, an attacker would have to create a situation where the available price in
-a Uniswap Pair at the beginning of many blocks during a 1-hour period was
+a OMGSwap Pair at the beginning of many blocks during a 1-hour period was
 significantly higher or lower than the market price.
 </p>
 
@@ -1182,11 +1182,11 @@ performing this analysis, including but not limited to:
 <h3 id="org0863525">Swap Composability</h3>
 <div class="outline-text-3" id="text-org0863525">
 <p>
-Similarly to using a Uniswap Pair as a price oracle, smart contract developers may
-find it convenient to rely on a Uniswap Pair for on-chain liquidity. For example,
+Similarly to using a OMGSwap Pair as a price oracle, smart contract developers may
+find it convenient to rely on a OMGSwap Pair for on-chain liquidity. For example,
 a contract selling Cryptokitties might offer to accept payment in any token,
 immediately converting all proceeds from a sale to DAI via the corresponding
-Uniswap Pair. Similarly, a contract charging a fee for some interaction might
+OMGSwap Pair. Similarly, a contract charging a fee for some interaction might
 choose to accept fees in multiple assets, provided that they can be swapped to DAI
 after payment.
 </p>
@@ -1278,7 +1278,7 @@ overflow is a realistic possibility for the assets involved.
 <h3 id="org8ba55be">Expectations of Token Behaviour</h3>
 <div class="outline-text-3" id="text-org8ba55be">
 <p>
-A <code>UniswapV2Pair</code> contract directly interacts with its underlying pool tokens,
+A <code>OMGSwapV2Pair</code> contract directly interacts with its underlying pool tokens,
 and as such makes certain assumptions about the semantics of the <code>transfer</code> and
 <code>balanceOf</code> methods exposed by those tokens.
 </p>
@@ -1295,7 +1295,7 @@ the V1 contracts, the V2 contracts are intended to be safe to use with:
 
 <p>
 There are of course still ways in which a token could violate the assumptions
-made by the Uniswap contracts. While a full formal description of a "good" token
+made by the OMGSwap contracts. While a full formal description of a "good" token
 is out of scope for this report, the audit team is aware of the following token
 behaviours that could cause issues with V2:
 </p>
@@ -1312,7 +1312,7 @@ involved in a token transfer. For example, this may be used to implement
 </p>
 
 <p>
-This may fail to have the expected economic effect on a <code>UniswapV2Pair</code>. For
+This may fail to have the expected economic effect on a <code>OMGSwapV2Pair</code>. For
 example, if its balance in a token were to increase outside of the usual
 interactions, the surplus tokens would be claimable by any account that calls
 <code>skim</code> (and would not result in the surplus tokens accruing to the pool, as
@@ -1349,7 +1349,7 @@ approach, but at least PAXG is known to use the first.
 <p>
 Although the core is able to handle tokens of either type, both approaches are
 incompatible with the current implementation of the router in
-<code>uniswap-v2-periphery</code>. The specifics are discussed in <a href="#orgd15839d">Router: incompatible with token with fees on transfer</a>.
+<code>OMGSwap-v2-periphery</code>. The specifics are discussed in <a href="#orgd15839d">Router: incompatible with token with fees on transfer</a>.
 </p>
 
 <p>
@@ -1382,7 +1382,7 @@ octillion), well in excess of the total supply of any mainstream token.
 
 <p>
 This limit could however become problematic should a token with a very large
-number of decimals be used within a <code>UniswapV2Pair</code>. The audit team is unaware
+number of decimals be used within a <code>OMGSwapV2Pair</code>. The audit team is unaware
 of any tokens in wide use with such high precision.
 </p>
 </div>
@@ -1393,7 +1393,7 @@ of any tokens in wide use with such high precision.
 <h3 id="org6f533fe">Core / Periphery Seperation</h3>
 <div class="outline-text-3" id="text-org6f533fe">
 <p>
-The Uniswap V2 contracts introduce a separation between the core and periphery
+The OMGSwap V2 contracts introduce a separation between the core and periphery
 contracts, where the core contracts are responsible for supporting liquidity
 providers, providing time weighted price feeds and enforcing core accounting
 invariants. Features designed to support or protect traders are implemented with
@@ -1423,7 +1423,7 @@ transaction, is incorrect and could result in loss of funds.
 <h3 id="org5c44063">Optimistic Swaps</h3>
 <div class="outline-text-3" id="text-org5c44063">
 <p>
-The implementation of swap in UniswapV2Pair adds the ability to withdraw tokens
+The implementation of swap in OMGSwapV2Pair adds the ability to withdraw tokens
 and use them provided they are returned or paid for by the end of the
 transaction. At a high level, this is implemented with the following sequence of
 actions:
@@ -1501,7 +1501,7 @@ It should be noted that the above invariant is defined over the Pair's
 <p>
 This check is similar, but not exactly equivalent. Semantically reserves can be
 thought of as "last recorded balances". This has the potential to be problematic
-as balances are arguably the thing that the <code>UniswapV2Pair</code> really cares about.
+as balances are arguably the thing that the <code>OMGSwapV2Pair</code> really cares about.
 </p>
 
 <p>
@@ -1514,7 +1514,7 @@ into the Pair.
 <p>
 We can therefore infer a system invariant for well behaved tokens: <i>balances
 are always greater than or equal to reserves at the end of every call to</i>
-<code>UniswapV2Pair</code>.
+<code>OMGSwapV2Pair</code>.
 </p>
 
 <p>
@@ -1562,7 +1562,7 @@ The calculation of input amounts does not revert on underflow. Negative
 inputs are instead coerced to zero. This is a design decision made to ensure
 that the core can handle tokens that deflate the sender's balance on
 transfer (perhaps as an implementation of some transfer fee). Neither the
-audit or Uniswap dev teams are aware of any mainstream token implemented in
+audit or OMGSwap dev teams are aware of any mainstream token implemented in
 this manner.
 </p>
 
@@ -1832,10 +1832,10 @@ by non-formal code review and conventional testing.
 </p>
 
 <p>
-Formal specifications for the contracts in <code>uniswap-v2-core</code> were written in the
+Formal specifications for the contracts in <code>OMGSwap-v2-core</code> were written in the
 <a href="https://github.com/dapphub/klab/blob/master/acts.md"><code>act</code></a> specification language. These specifications are then compiled into
 reachability claims in the K language, and proved using the K framework prover
-against the bytecode produced by the build system in the <code>uniswap-v2-core</code>
+against the bytecode produced by the build system in the <code>OMGSwap-v2-core</code>
 repository.
 </p>
 
@@ -1848,9 +1848,9 @@ creation form a valuable base for higher level reasoning.
 </p>
 
 <p>
-The specifications can be found in the <a href="https://github.com/dapp-org/k-uniswap-v2">dapp-org/k-uniswap-v2</a> git repo.
+The specifications can be found in the <a href="https://github.com/dapp-org/k-OMGSwap-v2">dapp-org/k-OMGSwap-v2</a> git repo.
 The proof status of those specs is visible in the audit team's CI system at
-<a href="https://dapp.ci/k-uniswap/">dapp.ci/k-uniswap</a>.
+<a href="https://dapp.ci/k-OMGSwap/">dapp.ci/k-OMGSwap</a>.
 </p>
 </div>
 
@@ -1884,11 +1884,11 @@ time contraints meant that such claims were not pursued as part of this engageme
 <h4 id="org5dc2346">Token implementation</h4>
 <div class="outline-text-4" id="text-org5dc2346">
 <p>
-<code>UniswapV2Pair</code> calls into untrusted external contracts to get token balances
+<code>OMGSwapV2Pair</code> calls into untrusted external contracts to get token balances
 (<code>balanceOf</code>) and to make token transfers (<code>transfer</code>). These calls could result
 in any behaviour, and in order to simplify the proof work, a token
 implementation that semantically matches the one in
-<code>uniswap-v2-core/contracts/UniswapV2ERC20.sol</code> has been assumed.
+<code>OMGSwap-v2-core/contracts/OMGSwapV2ERC20.sol</code> has been assumed.
 </p>
 
 <p>
@@ -1962,7 +1962,7 @@ has never been completed.
 </p>
 
 <p>
-The team believes that the presence of the reentrancy mutex in <code>UniswapV2Pair</code>
+The team believes that the presence of the reentrancy mutex in <code>OMGSwapV2Pair</code>
 in combination with some custom lemmas should allow for the generation of such a
 proof (see <a href="#orgd8b71ec">Verification of external calls to unknown code</a>), but time constraints
 meant that it was not pursued as part of this engagement.
@@ -1982,7 +1982,7 @@ barring pathological token behaviours.
 <div class="outline-text-4" id="text-orgf6f6f2b">
 <p>
 The formal specifications make claims only about the state of the blockchain at
-the start and end of a call into the Uniswap contracts. They do not make claims
+the start and end of a call into the OMGSwap contracts. They do not make claims
 about the particulars of any state transitions during a call. This means that
 the behaviour of the reentrancy mutex is not fully specified. The team has
 generated proofs of the following:
@@ -2075,7 +2075,7 @@ potentially invalidate any proof.
 
 <p>
 The lemmas and their supporting documentation can be found in
-<a href="https://github.com/dapp-org/k-uniswap-v2/blob/master/src/lemmas.k.md">k-uniswap-v2/src/lemmas.k.md</a> and <a href="https://github.com/dapp-org/k-uniswap-v2/blob/master/src/prelude.smt2.md">k-uniswap-v2/src/prelude.smt2.md</a>.
+<a href="https://github.com/dapp-org/k-OMGSwap-v2/blob/master/src/lemmas.k.md">k-OMGSwap-v2/src/lemmas.k.md</a> and <a href="https://github.com/dapp-org/k-OMGSwap-v2/blob/master/src/prelude.smt2.md">k-OMGSwap-v2/src/prelude.smt2.md</a>.
 </p>
 </div>
 </div>
@@ -2119,7 +2119,7 @@ team believes that this claim should in principle be provable.
 <p>
 The audit team believes that the existing formal specifications could be
 extended or built upon in several valuable directions, and encourages the
-Uniswap team to investigate the following in the future:
+OMGSwap team to investigate the following in the future:
 </p>
 </div>
 
@@ -2248,7 +2248,7 @@ in the <a href="#org16ece60">manual proof of convergence</a>.
 </p></div></div>
 
 <div class="footdef"><sup><a id="fn.3" class="footnum" href="#fnr.3">3</a></sup> <div class="footpara"><p class="footpara">
-<a href="https://arxiv.org/abs/1911.03380">An Analysis of Uniswap Markets</a> - Angeris, Kao, Chiang, Noyes, Chitra
+<a href="https://arxiv.org/abs/1911.03380">An Analysis of OMGSwap Markets</a> - Angeris, Kao, Chiang, Noyes, Chitra
 </p></div></div>
 
 

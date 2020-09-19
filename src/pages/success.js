@@ -94,7 +94,7 @@ const Success = props => {
           <Title style={{ width: '100%' }}>You are now subscribed.</Title>
           <p>
             {"We'll be in touch soon. You can always unsubscribe"}
-            <a href="https://uniswap.us19.list-manage.com/unsubscribe?u=c93471c1443f1e6365b5ca093&id=7d591bff13">
+            <a href="https://OMGSwap.us19.list-manage.com/unsubscribe?u=c93471c1443f1e6365b5ca093&id=7d591bff13">
               {' here.'}
             </a>
           </p>

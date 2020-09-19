@@ -5,11 +5,11 @@ tags: smart-contracts, documentation
 
 # Code
 
-[`UniswapV2Factory.sol`](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol)
+[`OMGSwapV2Factory.sol`](https://github.com/OMGSwap/OMGSwap-v2-core/blob/master/contracts/OMGSwapV2Factory.sol)
 
 # Address
 
-`UniswapV2Factory` is deployed at `0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f` on the Ethereum [mainnet](https://etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), and the [Ropsten](https://ropsten.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), [Rinkeby](https://rinkeby.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), [Görli](https://goerli.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), and [Kovan](https://kovan.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f) testnets. It was built from commit [8160750](https://github.com/Uniswap/uniswap-v2-core/tree/816075049f811f1b061bca81d5d040b96f4c07eb).
+`OMGSwapV2Factory` is deployed at `0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f` on the Ethereum [mainnet](https://etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), and the [Ropsten](https://ropsten.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), [Rinkeby](https://rinkeby.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), [Görli](https://goerli.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f), and [Kovan](https://kovan.etherscan.io/address/0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f) testnets. It was built from commit [8160750](https://github.com/OMGSwap/OMGSwap-v2-core/tree/816075049f811f1b061bca81d5d040b96f4c07eb).
 
 # Events
 
@@ -87,13 +87,13 @@ Creates a pair for `tokenA` and `tokenB` if one doesn't exist already.
 # Interface
 
 ```solidity
-import '@uniswap/v2-core/contracts/interfaces/IUniswapV2Factory.sol';
+import '@OMGSwap/v2-core/contracts/interfaces/IOMGSwapV2Factory.sol';
 ```
 
 ```solidity
 pragma solidity >=0.5.0;
 
-interface IUniswapV2Factory {
+interface IOMGSwapV2Factory {
   event PairCreated(address indexed token0, address indexed token1, address pair, uint);
 
   function getPair(address tokenA, address tokenB) external view returns (address pair);
@@ -110,7 +110,7 @@ interface IUniswapV2Factory {
 # ABI
 
 ```typescript
-import IUniswapV2Factory from '@uniswap/v2-core/build/IUniswapV2Factory.json'
+import IOMGSwapV2Factory from '@OMGSwap/v2-core/build/IOMGSwapV2Factory.json'
 ```
 
-[https://unpkg.com/@uniswap/v2-core@1.0.0/build/IUniswapV2Factory.json](https://unpkg.com/@uniswap/v2-core@1.0.0/build/IUniswapV2Factory.json)
+[https://unpkg.com/@OMGSwap/v2-core@1.0.0/build/IOMGSwapV2Factory.json](https://unpkg.com/@OMGSwap/v2-core@1.0.0/build/IOMGSwapV2Factory.json)

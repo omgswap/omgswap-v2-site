@@ -3,13 +3,13 @@ title: Queries
 tags: api, documentation
 ---
 
-The subgraph can be queried to retrieve important information about Uniswap, pairs, tokens, transactions, users, and more. This page will provide examples for common queries.
+The subgraph can be queried to retrieve important information about OMGSwap, pairs, tokens, transactions, users, and more. This page will provide examples for common queries.
 
-To try these queries and run your own visit the [subgraph sandbox](https://thegraph.com/explorer/subgraph/uniswap/uniswap-v2).
+To try these queries and run your own visit the [subgraph sandbox](https://thegraph.com/explorer/subgraph/OMGSwap/OMGSwap-v2).
 
 ### Global Data
 
-To query global data you can pass in the Uniswap Factory address and select from available fields.
+To query global data you can pass in the OMGSwap Factory address and select from available fields.
 
 #### Global Stats
 
@@ -17,7 +17,7 @@ All time volume in USD, total liquidity in USD, all time transaction count.
 
 ```
 {
- uniswapFactory(id: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f"){
+ OMGSwapFactory(id: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f"){
    totalVolumeUSD
    totalLiquidityUSD
    txCount
@@ -31,7 +31,7 @@ To get a snapshot of past state, use The Graph's block query feature and query a
 
 ```
 {
- uniswapFactory(id: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f", block: {number: 10291203}){
+ OMGSwapFactory(id: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f", block: {number: 10291203}){
    totalVolumeUSD
    totalLiquidityUSD
    txCount
@@ -73,9 +73,9 @@ Fetch a snapshot of the current state of the pair with common values. This examp
 }`
 ```
 
-#### All pairs in Uniswap
+#### All pairs in OMGSwap
 
-The Graph limits entity return amounts to 1000 per query as of now. To get all pairs on Uniswap use a loop and graphql skip query to fetch multiple chunks of 1000 pairs. The query would look like this (where skip is some incrementing variable passed into your query).
+The Graph limits entity return amounts to 1000 per query as of now. To get all pairs on OMGSwap use a loop and graphql skip query to fetch multiple chunks of 1000 pairs. The query would look like this (where skip is some incrementing variable passed into your query).
 
 ```
 {
@@ -89,7 +89,7 @@ The Graph limits entity return amounts to 1000 per query as of now. To get all p
 
 #### Most liquid pairs
 
-Order by liquidity to get the most liquid pairs in Uniswap.
+Order by liquidity to get the most liquid pairs in OMGSwap.
 
 ```
 {
@@ -149,11 +149,11 @@ Day data is useful for building charts and historical views around entities. To 
 
 ### Token Data
 
-Token data can be fetched using the token contract address as an ID. Token data is aggregated across all pairs the token is included in. Any token that is included in some pair in Uniswap can be queried.
+Token data can be fetched using the token contract address as an ID. Token data is aggregated across all pairs the token is included in. Any token that is included in some pair in OMGSwap can be queried.
 
 #### Token Overview
 
-Get a snapshot of the current stats on a token in Uniswap. This query fetches current stats on DAI.
+Get a snapshot of the current stats on a token in OMGSwap. This query fetches current stats on DAI.
 The allPairs field gets the first 200 pairs DAI is included in sorted by liquidity in derived USD.
 
 ```
@@ -172,9 +172,9 @@ The allPairs field gets the first 200 pairs DAI is included in sorted by liquidi
 }
 ```
 
-#### All Tokens in Uniswap
+#### All Tokens in OMGSwap
 
-Similar to fetching all pairs (see above), you can query all tokens in Uniswap. Because The Graph service limits return size to 1000 entities use graphql skip query. (Note this query will not work in the graph sandbox and more resembles the structure of a query you'd pass to some graphql middleware like [Apollo](https://www.apollographql.com/)).
+Similar to fetching all pairs (see above), you can query all tokens in OMGSwap. Because The Graph service limits return size to 1000 entities use graphql skip query. (Note this query will not work in the graph sandbox and more resembles the structure of a query you'd pass to some graphql middleware like [Apollo](https://www.apollographql.com/)).
 
 ```
 {
@@ -264,7 +264,7 @@ tokenDayDatas(orderBy: date, orderDirection: asc,
 
 ### ETH Price
 
-You can use the Bundle entity to query current USD price of ETH in Uniswap based on a weighted average of stablecoins.
+You can use the Bundle entity to query current USD price of ETH in OMGSwap based on a weighted average of stablecoins.
 
 ```
 {

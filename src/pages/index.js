@@ -658,7 +658,7 @@ const GoalSection = () => {
           <img src={Indoex} alt="Indoex" height="48"/>
         </ColT>
         <ColT>
-          <img src={Uniswap} alt="Uniswap" height="48"/>
+          <img src={Uniswap} alt="OMGSwap" height="48"/>
         </ColT>
       </Row>
       <Row>

@@ -11,7 +11,7 @@ The most obvious way to get the address for a pair is to call <Link to='/docs/v2
 
 # CREATE2
 
-Thanks to some [fancy footwork in the factory](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol#L32), we can also compute pair addresses _without any on-chain lookups_ because of [CREATE2](https://eips.ethereum.org/EIPS/eip-1014). The following values are required for this technique:
+Thanks to some [fancy footwork in the factory](https://github.com/OMGSwap/OMGSwap-v2-core/blob/master/contracts/OMGSwapV2Factory.sol#L32), we can also compute pair addresses _without any on-chain lookups_ because of [CREATE2](https://eips.ethereum.org/EIPS/eip-1014). The following values are required for this technique:
 
 |                        |                                                                                 |
 | :--------------------- | :------------------------------------------------------------------------------ |

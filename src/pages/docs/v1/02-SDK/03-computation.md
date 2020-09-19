@@ -63,7 +63,7 @@ const marketDetails: MarketDetails = getMarketDetails(undefined, reserves) // ET
 
 This function computes trade details for the passed market data.
 
--This function throws an error if the passed \_tradeAmount is greater than the amount of ETH/tokens in the relevant Uniswap exchange.
+-This function throws an error if the passed \_tradeAmount is greater than the amount of ETH/tokens in the relevant OMGSwap exchange.
 
 - Trade amounts must be passed in non-decimal form \(where e.g. 1 ETH is represented as 1000000000000000000 wei\).
 

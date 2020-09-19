@@ -1,16 +1,16 @@
 ---
-title: Connect to Uniswap
+title: Connect to OMGSwap
 ---
 
 <Info>
-  Uniswap V1, while still fully functional, is no longer under active development. Looking for <Link style={{ display: "contents" }} to='/docs/v2/'>V2 documentation</Link>?
+  OMGSwap V1, while still fully functional, is no longer under active development. Looking for <Link style={{ display: "contents" }} to='/docs/v2/'>V2 documentation</Link>?
 </Info>
 
-The Uniswap smart contracts exist on the Ethereum blockchain. Use [ethers.js](https://github.com/ethers-io/ethers.js/) or [web3.js](https://github.com/ethereum/web3.js) to connect your website to Ethereum. Users will need a web3-enabled browser. On desktop this means using the [MetaMask](https://metamask.io/) extension or something similar. On mobile, web3-compatible browsers include [Trust Wallet](https://trustwalletapp.com/) and [Coinbase Wallet](https://wallet.coinbase.com/). See [ethereum.org](https://ethereum.org/use/#_3-what-is-a-wallet-and-which-one-should-i-use) to learn more.
+The OMGSwap smart contracts exist on the Ethereum blockchain. Use [ethers.js](https://github.com/ethers-io/ethers.js/) or [web3.js](https://github.com/ethereum/web3.js) to connect your website to Ethereum. Users will need a web3-enabled browser. On desktop this means using the [MetaMask](https://metamask.io/) extension or something similar. On mobile, web3-compatible browsers include [Trust Wallet](https://trustwalletapp.com/) and [Coinbase Wallet](https://wallet.coinbase.com/). See [ethereum.org](https://ethereum.org/use/#_3-what-is-a-wallet-and-which-one-should-i-use) to learn more.
 
 # Factory Contract
 
-The Uniswap [factory contract](https://github.com/Uniswap/uniswap-v1/blob/master/contracts/uniswap_factory.vy) can be used to create exchange contracts for any ERC20 token that does not already have one. It also functions as a registry of ERC20 tokens that have been added to the system, and the exchange with which they are associated.
+The OMGSwap [factory contract](https://github.com/OMGSwap/OMGSwap-v1/blob/master/contracts/OMGSwap_factory.vy) can be used to create exchange contracts for any ERC20 token that does not already have one. It also functions as a registry of ERC20 tokens that have been added to the system, and the exchange with which they are associated.
 
 The factory contract can be instantiated using the factory address and ABI:
 
@@ -615,17 +615,17 @@ const exchangeContract = new web3.eth.Contract(exchangeABI, exchangeAddress)
 
 # Token Contracts
 
-Some Uniswap interactions require making calls directly to ERC20 token contracts rather than the exchanges with which they are associated.
+Some OMGSwap interactions require making calls directly to ERC20 token contracts rather than the exchanges with which they are associated.
 
 ## Get Token Address
 
-The `getToken` method in the factory contract can be used to find the ERC20 token address associated with an exchange contract. There is no barrier of entry for adding an ERC20 token to Uniswap or checks on the validity of the token contracts. Frontend interfaces should maintain a list of valid ERC20 tokens that users can safely trade or allow users to paste in arbitrary addresses.
+The `getToken` method in the factory contract can be used to find the ERC20 token address associated with an exchange contract. There is no barrier of entry for adding an ERC20 token to OMGSwap or checks on the validity of the token contracts. Frontend interfaces should maintain a list of valid ERC20 tokens that users can safely trade or allow users to paste in arbitrary addresses.
 
 ```javascript
 const tokenAddress = factoryContract.methods.getToken(exchangeAddress)
 ```
 
-If the return value is `0x0000000000000000000000000000000000000000` the input address is not a Uniswap exchange.
+If the return value is `0x0000000000000000000000000000000000000000` the input address is not a OMGSwap exchange.
 
 ## Token Interface
 

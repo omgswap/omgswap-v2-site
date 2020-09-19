@@ -100,7 +100,7 @@ Responsible for formatting percentages (10% instead of 0.1).
 ## Example
 
 ```typescript
-import { Percent } from '@uniswap/sdk'
+import { Percent } from '@OMGSwap/sdk'
 
 const percent = new Percent('60', '100')
 console.log(percent.toSignificant(2)) // 60
@@ -125,7 +125,7 @@ Responsible for formatting token amounts with specific decimal places.
 ## Example
 
 ```typescript
-import { Token, TokenAmount } from '@uniswap/sdk'
+import { Token, TokenAmount } from '@OMGSwap/sdk'
 
 const FRIED = new Token(ChainId.MAINNET, '0xfa1aFe1000000000000000000000000000000000', 18, 'FRIED', 'Beans')
 
@@ -188,7 +188,7 @@ Responsible for denominating the relative price between two tokens. Denominator 
 ## Example
 
 ```typescript
-import { ChainId, WETH as WETHs, Token, Price } from '@uniswap/sdk'
+import { ChainId, WETH as WETHs, Token, Price } from '@OMGSwap/sdk'
 
 const WETH = WETHs[ChainId.MAINNET]
 const ABC = new Token(ChainId.MAINNET, '0xabc0000000000000000000000000000000000000', 18, 'ABC')

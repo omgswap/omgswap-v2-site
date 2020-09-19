@@ -7,7 +7,7 @@ OMGSwap incentivizes users to add liquidity to pools by rewarding providers with
 
 # Risks
 
-To understand the risks associated with providing liquidity you can read [https://medium.com/@pintail/uniswap-a-good-deal-for-liquidity-providers-104c0b6816f2](https://medium.com/@pintail/uniswap-a-good-deal-for-liquidity-providers-104c0b6816f2) to get an in-depth look at how to conceptualize a liquidity position.
+To understand the risks associated with providing liquidity you can read [https://medium.com/@pintail/OMGSwap-a-good-deal-for-liquidity-providers-104c0b6816f2](https://medium.com/@pintail/OMGSwap-a-good-deal-for-liquidity-providers-104c0b6816f2) to get an in-depth look at how to conceptualize a liquidity position.
 
 # Example from the article
 

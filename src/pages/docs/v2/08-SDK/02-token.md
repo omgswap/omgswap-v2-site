@@ -12,7 +12,7 @@ The Token entity represents an ERC-20 token at a specific address on a specific 
 # Example
 
 ```typescript
-import { ChainId, Token } from '@uniswap/sdk'
+import { ChainId, Token } from '@OMGSwap/sdk'
 
 const token = new Token(ChainId.MAINNET, '0xc0FFee0000000000000000000000000000000000', 18, 'HOT', 'Caffeine')
 ```

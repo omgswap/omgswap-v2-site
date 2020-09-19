@@ -5,7 +5,7 @@ tags: smart-contracts, documentation
 
 # Code
 
-[`UniswapV2Library.sol`](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol)
+[`OMGSwapV2Library.sol`](https://github.com/OMGSwap/OMGSwap-v2-periphery/blob/master/contracts/libraries/OMGSwapV2Library.sol)
 
 # Internal Functions
 

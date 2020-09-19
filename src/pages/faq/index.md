@@ -56,7 +56,7 @@ Ethereum requires gas to execute each transaction. You can also check ETH gas st
 
 # How can I see my liquidity provider fees?
 
-There are many community built tools like [https://www.uniswaproi.com/](https://www.uniswaproi.com/), [https://www.zapper.fi/dashboard](https://www.zapper.fi/dashboard) and [https://zerion.io/](https://zerion.io/). OMGSwap provides no guarantees the information on these sites is correct.
+There are many community built tools like [https://www.OMGSwaproi.com/](https://www.OMGSwaproi.com/), [https://www.zapper.fi/dashboard](https://www.zapper.fi/dashboard) and [https://zerion.io/](https://zerion.io/). OMGSwap provides no guarantees the information on these sites is correct.
 
 # OMGSwap tools and resources
 

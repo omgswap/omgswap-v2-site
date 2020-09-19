@@ -1,122 +1,122 @@
 {
-  "index_name": "uniswap_v2_docs",
+  "index_name": "OMGSwap_v2_docs",
   "start_urls": [
     {
-      "url": "https://beta.uniswap.org/docs/v2/",
+      "url": "https://omgswap.in/docs/v2/",
       "extra_attributes": {
         "version": ["v2"]
       }
     },
     {
-      "url": "https://beta.uniswap.org/docs/v1/",
+      "url": "https://omgswap.in/docs/v1/",
       "extra_attributes": {
         "version": ["v1"]
       }
     },
 
     {
-      "url": "https://beta.uniswap.org/docs/v2/protocol-overview/how-uniswap-works/",
+      "url": "https://omgswap.in/docs/v2/protocol-overview/how-OMGSwap-works/",
       "extra_attributes": {
         "version": ["v2"]
       }
     },
 
     {
-      "url": "https://beta.uniswap.org/docs/v2/protocol-overview/ecosystem-participants/",
+      "url": "https://omgswap.in/docs/v2/protocol-overview/ecosystem-participants/",
       "extra_attributes": {
         "version": ["v2"]
       }
     },
 
     {
-      "url": "https://beta.uniswap.org/docs/v2/protocol-overview/smart-contracts/",
+      "url": "https://omgswap.in/docs/v2/protocol-overview/smart-contracts/",
       "extra_attributes": {
         "version": ["v2"]
       }
     },
 
     {
-      "url": "https://beta.uniswap.org/docs/v2/protocol-overview/glossary/",
+      "url": "https://omgswap.in/docs/v2/protocol-overview/glossary/",
       "extra_attributes": {
         "version": ["v2"]
       }
     },
 
     {
-      "url": "https://beta.uniswap.org/docs/v2/core-concepts/swaps/",
+      "url": "https://omgswap.in/docs/v2/core-concepts/swaps/",
       "extra_attributes": {
         "version": ["v2"]
       }
     },
 
     {
-      "url": "https://beta.uniswap.org/docs/v2/core-concepts/pools/",
+      "url": "https://omgswap.in/docs/v2/core-concepts/pools/",
       "extra_attributes": {
         "version": ["v2"]
       }
     },
     {
-      "url": "https://beta.uniswap.org/docs/v2/core-concepts/flash-swaps/",
+      "url": "https://omgswap.in/docs/v2/core-concepts/flash-swaps/",
       "extra_attributes": {
         "version": ["v2"]
       }
     },
     {
-      "url": "https://beta.uniswap.org/docs/v2/core-concepts/oracles/",
+      "url": "https://omgswap.in/docs/v2/core-concepts/oracles/",
       "extra_attributes": {
         "version": ["v2"]
       }
     },
     {
-      "url": "https://beta.uniswap.org/docs/v2/advanced-topics/fees/",
+      "url": "https://omgswap.in/docs/v2/advanced-topics/fees/",
       "extra_attributes": {
         "version": ["v2"]
       }
     },
     {
-      "url": "https://beta.uniswap.org/docs/v2/advanced-topics/pricing/",
+      "url": "https://omgswap.in/docs/v2/advanced-topics/pricing/",
       "extra_attributes": {
         "version": ["v2"]
       }
     },
     {
-      "url": "https://beta.uniswap.org/docs/v2/advanced-topics/understanding-returns/",
+      "url": "https://omgswap.in/docs/v2/advanced-topics/understanding-returns/",
       "extra_attributes": {
         "version": ["v2"]
       }
     },
     {
-      "url": "https://beta.uniswap.org/docs/v2/advanced-topics/security/",
+      "url": "https://omgswap.in/docs/v2/advanced-topics/security/",
       "extra_attributes": {
         "version": ["v2"]
       }
     },
     {
-      "url": "https://beta.uniswap.org/docs/v2/advanced-topics/math/",
+      "url": "https://omgswap.in/docs/v2/advanced-topics/math/",
       "extra_attributes": {
         "version": ["v2"]
       }
     },
     {
-      "url": "https://beta.uniswap.org/docs/v2/core-concepts/flash-swaps/",
+      "url": "https://omgswap.in/docs/v2/core-concepts/flash-swaps/",
       "extra_attributes": {
         "version": ["v2"]
       }
     },
     {
-      "url": "https://beta.uniswap.org/docs/v2/advanced-topics/research/",
+      "url": "https://omgswap.in/docs/v2/advanced-topics/research/",
       "extra_attributes": {
         "version": ["v2"]
       }
     },
     {
-      "url": "https://beta.uniswap.org/docs/v2/API/entities/",
+      "url": "https://omgswap.in/docs/v2/API/entities/",
       "extra_attributes": {
         "version": ["v2"]
       }
     },
     {
-      "url": "https://beta.uniswap.org/docs/v2/API/queries/",
+      "url": "https://omgswap.in/docs/v2/API/queries/",
       "extra_attributes": {
         "version": ["v2"]
       }

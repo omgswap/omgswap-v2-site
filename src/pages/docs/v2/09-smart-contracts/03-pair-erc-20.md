@@ -3,11 +3,11 @@ title: Pair (ERC-20)
 tags: smart-contracts, documentation
 ---
 
-This documentation covers ERC-20 functionality for denominating pool tokens. For Uniswap-specific functionality, see <Link to='/docs/v2/smart-contracts/pair'>Pair</Link>.
+This documentation covers ERC-20 functionality for denominating pool tokens. For OMGSwap-specific functionality, see <Link to='/docs/v2/smart-contracts/pair'>Pair</Link>.
 
 # Code
 
-[`UniswapV2ERC20.sol`](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol)
+[`OMGSwapV2ERC20.sol`](https://github.com/OMGSwap/OMGSwap-v2-core/blob/master/contracts/OMGSwapV2ERC20.sol)
 
 # Events
 
@@ -35,7 +35,7 @@ Emitted each time a transfer occurs via [transfer](#transfer-1), [transferFrom](
 function name() external pure returns (string memory);
 ```
 
-Returns `Uniswap V2` for all pairs.
+Returns `OMGSwap V2` for all pairs.
 
 ## symbol
 
@@ -148,13 +148,13 @@ Sets the allowance for a spender where approval is granted via a signature.
 # Interface
 
 ```solidity
-import '@uniswap/v2-core/contracts/interfaces/IUniswapV2ERC20.sol';
+import '@OMGSwap/v2-core/contracts/interfaces/IOMGSwapV2ERC20.sol';
 ```
 
 ```solidity
 pragma solidity >=0.5.0;
 
-interface IUniswapV2ERC20 {
+interface IOMGSwapV2ERC20 {
   event Approval(address indexed owner, address indexed spender, uint value);
   event Transfer(address indexed from, address indexed to, uint value);
 
@@ -180,7 +180,7 @@ interface IUniswapV2ERC20 {
 # ABI
 
 ```typescript
-import IUniswapV2ERC20 from '@uniswap/v2-core/build/IUniswapV2ERC20.json'
+import IOMGSwapV2ERC20 from '@OMGSwap/v2-core/build/IOMGSwapV2ERC20.json'
 ```
 
-[https://unpkg.com/@uniswap/v2-core@1.0.0/build/IUniswapV2ERC20.json](https://unpkg.com/@uniswap/v2-core@1.0.0/build/IUniswapV2ERC20.json)
+[https://unpkg.com/@OMGSwap/v2-core@1.0.0/build/IOMGSwapV2ERC20.json](https://unpkg.com/@OMGSwap/v2-core@1.0.0/build/IOMGSwapV2ERC20.json)

@@ -83,7 +83,7 @@ export const ETH_PRICE = block => {
 
 const APOLLO_QUERY = gql`
   {
-    uniswapFactory(id: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f") {
+    OMGSwapFactory(id: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f") {
       totalVolumeUSD
       totalLiquidityUSD
       pairCount
@@ -94,10 +94,10 @@ const APOLLO_QUERY = gql`
   }
 `
 
-export const UNISWAP_GLOBALS_24HOURS_AGO_QUERY = block => {
+export const OMGSwap_GLOBALS_24HOURS_AGO_QUERY = block => {
   let queryString = `
-  query uniswapFactory {
-    uniswapFactory(id: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f", block: { number: ${block} }) {
+  query OMGSwapFactory {
+    OMGSwapFactory(id: "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f", block: { number: ${block} }) {
       totalVolumeUSD
       totalLiquidityUSD
       pairCount
@@ -129,12 +129,12 @@ export default function Ticker() {
   useEffect(() => {
     async function getData() {
       let result = await client.query({
-        query: UNISWAP_GLOBALS_24HOURS_AGO_QUERY(oneDayBackBlock),
+        query: OMGSwap_GLOBALS_24HOURS_AGO_QUERY(oneDayBackBlock),
 
         fetchPolicy: 'cache-first'
       })
       if (result) {
-        setOnedayResult(result?.data?.uniswapFactory)
+        setOnedayResult(result?.data?.OMGSwapFactory)
       }
     }
     if (oneDayBackBlock) {
@@ -151,7 +151,7 @@ export default function Ticker() {
   }
 
   if (data && oneDayResult) {
-    const volume24Hour = parseFloat(data?.uniswapFactory?.totalVolumeUSD) - parseFloat(oneDayResult?.totalVolumeUSD)
+    const volume24Hour = parseFloat(data?.OMGSwapFactory?.totalVolumeUSD) - parseFloat(oneDayResult?.totalVolumeUSD)
 
     UniStats.volume = [
       new Intl.NumberFormat('en-US', {
@@ -169,10 +169,10 @@ export default function Ticker() {
         notation: 'compact',
         compactDisplay: 'short'
         // maximumSignificantDigits: 5
-      }).format(data.uniswapFactory.totalLiquidityUSD),
+      }).format(data.OMGSwapFactory.totalLiquidityUSD),
       ' Total Liquidity'
     ]
-    UniStats.exchanges = [Number.parseFloat(data?.uniswapFactory?.pairCount), ' Total Pools']
+    UniStats.exchanges = [Number.parseFloat(data?.OMGSwapFactory?.pairCount), ' Total Pools']
 
     UniStats.ETHprice = [
       new Intl.NumberFormat('en-US', {
