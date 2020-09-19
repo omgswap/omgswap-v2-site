@@ -367,7 +367,25 @@ const Card = styled.div`
     transition: transform 0.3s ease;
     will-change: transform;
 `
-
+const CardFull = styled.div`
+  margin: 10px;
+  padding: 10px;
+  color: ${({ theme }) => theme.textColor};
+  background-color: ${({ theme }) => theme.cardBG};
+  border: 1px solid ${({ theme }) => theme.colors.grey2};
+  height: 100%;
+  width: 100%;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0px 0px 1px rgba(0,0,0,0.05), 0px 4px 8px rgba(0,0,0,0.05), 0px 16px 24px rgba(0,0,0,0.05), 0px 24px 32px rgba(0,0,0,0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    will-change: transform;
+`
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -386,6 +404,34 @@ const Row = styled.div`
 const SummarySection = props => {
   return (
     <StyledSectionFlex>
+    <Row>
+      <CardFull>
+      <h1>
+        Omega Protocol Ltd. <b> DeFi Index Asset (DFIX)</b>
+      </h1>
+      <h2>
+        From November 2020 Every single DFI holder will get a reward from 2 million pDAI reward fund
+      </h2>
+      <p>Which will be distributed through smart contract for next 6 months.</p>
+      <p>This reward system is differ from O-BOX [ Omega Staking Box Application ], a dapp built upon. </p>
+      <p>Ethereum blockchain, run by couple of solidity smart contracts. </p>
+      <p>Details will be published at https://omgswap.in </p>
+      <p>DFI reward mechanism is a very simple but unique mechanism.</p>
+      <p>DFI will minted once only 30,000 DFI & after that minter set to ZERO_ADDRESS.</p>
+      <p>So DFI supply will remain fix forever.</p>
+      <p>DFI is not a security but its tradable digital asset. </p>
+      </CardFull>
+      <CardFull>
+      <h2>
+      <p>Decimal: 18</p>
+      <p>Name: DeFi Index</p>
+      <p>Ticker: DFIX</p>
+      <p>Supply: 30,000</p>
+      <p>Contract: 0x88FBeCfeF7146242C18D26321b628E9FCa6B76dd</p>
+      <p>Team allocation: 5%</p>
+      </h2>
+      </CardFull>
+    </Row>
       <StyledImgSection>
         <MiniNewInfo to="/blog/launch-omgswap-v2/">
           <StyledUnicornImage fadeIn={false} fluid={props.data.unicornImage.childImageSharp.fluid} />
