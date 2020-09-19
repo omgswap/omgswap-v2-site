@@ -3,7 +3,7 @@ title: Building an Oracle
 tags: oracles, documentation
 ---
 
-To build a price oracle on Uniswap V2, you must first understand the
+To build a price oracle on OMGSwap V2, you must first understand the
 requirements for your use case. Once you understand the kind of price
 average you require, it is a matter of storing the cumulative price
 variable from the pair as often as necessary, and computing
@@ -33,9 +33,9 @@ store the cumulative price once per period (e.g. once per 24 hours.)
 Computing the average price over these data points gives you 'fixed windows',
 which can be updated after the lapse of each period. We wrote
 an example oracle of this kind
-[here](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol).
+[here](https://github.com/OMGSwap/OMGSwap-v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol).
 
-<Github href="https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol">ExampleOracleSimple.sol</Github>
+<Github href="https://github.com/OMGSwap/OMGSwap-v2-periphery/blob/master/contracts/examples/ExampleOracleSimple.sol">ExampleOracleSimple.sol</Github>
 
 This example does not limit the maximum size of the fixed window, i.e.
 it only requires that the window size is greater than 1 period (e.g. 24 hours).
@@ -48,12 +48,12 @@ than once per period.
 
 There are at least
 [two kinds of moving averages](https://www.investopedia.com/terms/m/movingaverage.asp#types-of-moving-averages)
-that you can compute using the Uniswap cumulative price variable.
+that you can compute using the OMGSwap cumulative price variable.
 
 [Simple moving averages](https://www.investopedia.com/terms/s/sma.asp)
 give equal weight to each price measurement. We have built
 an example of a sliding window oracle
-[here](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleSlidingWindowOracle.sol).
+[here](https://github.com/OMGSwap/OMGSwap-v2-periphery/blob/master/contracts/examples/ExampleSlidingWindowOracle.sol).
 
 [Exponential moving averages](https://www.investopedia.com/terms/e/ema.asp)
 give more weight to the most recent price measurements. We do not yet have an example written for this type of oracle.
@@ -84,7 +84,7 @@ in the current block, e.g. because there has not been any liquidity event (`mint
 block, you can compute the cumulative price counterfactually.
 
 We provide a library for use in oracle contracts that has the method
-[`UniswapV2OracleLibrary#currentCumulativePrices`](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2OracleLibrary.sol#L16)
+[`OMGSwapV2OracleLibrary#currentCumulativePrices`](https://github.com/OMGSwap/OMGSwap-v2-periphery/blob/master/contracts/libraries/OMGSwapV2OracleLibrary.sol#L16)
 for getting the cumulative price as of the current block.
 The current cumulative price returned by this method is computed _counterfactually_, meaning it requires no call to
 the relative gas-expensive `#sync` method on the pair.
@@ -92,7 +92,7 @@ It is correct regardless of whether a swap has already executed in the current b
 
 # Notes on overflow
 
-The `UniswapV2Pair` cumulative price variables are designed to eventually overflow,
+The `OMGSwapV2Pair` cumulative price variables are designed to eventually overflow,
 i.e. `price0CumulativeLast` and `price1CumulativeLast` and `blockTimestampLast` will overflow through 0.
 
 This should not pose an issue to your oracle design, as the price average computation is concerned with differences
@@ -107,10 +107,10 @@ the cumulative prices, which is always expected to be less than `2^32` seconds.
 
 When computing time elapsed within your own oracle, you can simply store the `block.timestamp` of your observations
 as `uint256`, and avoid dealing with overflow math for computing the time elapsed between observations. This is how the
-[ExampleSlidingWindowOracle](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleSlidingWindowOracle.sol)
+[ExampleSlidingWindowOracle](https://github.com/OMGSwap/OMGSwap-v2-periphery/blob/master/contracts/examples/ExampleSlidingWindowOracle.sol)
 handles observation timestamps.
 
-<Github href="https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/examples/ExampleSlidingWindowOracle.sol">ExampleSlidingWindowOracle</Github>
+<Github href="https://github.com/OMGSwap/OMGSwap-v2-periphery/blob/master/contracts/examples/ExampleSlidingWindowOracle.sol">ExampleSlidingWindowOracle</Github>
 
 ## Integrating the oracle
 
@@ -138,8 +138,8 @@ It is possible to avoid regularly storing this cumulative price at the
 start of the period by utilizing storage proofs. However, this approach has limitations,
 especially in regard to gas cost and maximum length of the time period over which the average price can be measured.
 If you wish to try this approach, you can follow
-[this repository by Keydonix](https://github.com/Keydonix/uniswap-oracle/).
+[this repository by Keydonix](https://github.com/Keydonix/OMGSwap-oracle/).
 
-<Github href="https://github.com/Keydonix/uniswap-oracle">Keydonix: on-chain trustless and censorship resistant oracle</Github>
+<Github href="https://github.com/Keydonix/OMGSwap-oracle">Keydonix: on-chain trustless and censorship resistant oracle</Github>
 
-Keydonix has developed a general purpose price feed oracle built on Uniswap v2 that supports arbitrary time windows (up to 256 blocks) and doesn't require any active maintenance.
+Keydonix has developed a general purpose price feed oracle built on OMGSwap v2 that supports arbitrary time windows (up to 256 blocks) and doesn't require any active maintenance.

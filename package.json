@@ -78,7 +78,6 @@
     "styled-components": "^5.0.1"
   },
   "devDependencies": {
-    "@uniswap/token-lists": "^1.0.0-beta.16",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-loader": "^3.0.3",
@@ -100,7 +99,6 @@
     "devlocal": "gatsby develop -H 0.0.0.0",
     "start": "gatsby develop",
     "build": "gatsby build && yarn post-build",
-    "post-build": "cp ./node_modules/@uniswap/token-lists/src/tokenlist.schema.json public/",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "format": "prettier --write \"src/**/*.{js,jsx,md,mdx}\"",

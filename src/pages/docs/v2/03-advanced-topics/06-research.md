@@ -25,8 +25,8 @@ Authors: Guillermo Angeris, Tarun Chitra
 
 Published [medium](https://medium.com/@pintail) articles by Pintail.
 
-- [Understanding OMGSwap Returns](https://medium.com/@pintail/understanding-uniswap-returns-cc593f3499ef)
-- [OMGSwap: A Good Deal for Liquidity Providers?](https://medium.com/@pintail/uniswap-a-good-deal-for-liquidity-providers-104c0b6816f2)
+- [Understanding OMGSwap Returns](https://medium.com/@pintail/understanding-OMGSwap-returns-cc593f3499ef)
+- [OMGSwap: A Good Deal for Liquidity Providers?](https://medium.com/@pintail/OMGSwap-a-good-deal-for-liquidity-providers-104c0b6816f2)
 
 # Liquidity Provider Returns in Geometric Mean Markets
 

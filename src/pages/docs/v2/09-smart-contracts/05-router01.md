@@ -4,16 +4,16 @@ tags: smart-contracts, documentation
 ---
 
 <Info>
-UniswapV2Router01 should not be used any longer, because of the discovery of a <Link to='/docs/v2/smart-contracts/router01#getamountin'>low severity bug</Link> and the fact that some methods do not work with tokens that take fees on transfer. The current recommendation is to use <Link to='/docs/v2/smart-contracts/router02'>UniswapV2Router02</Link>.
+OMGSwapV2Router01 should not be used any longer, because of the discovery of a <Link to='/docs/v2/smart-contracts/router01#getamountin'>low severity bug</Link> and the fact that some methods do not work with tokens that take fees on transfer. The current recommendation is to use <Link to='/docs/v2/smart-contracts/router02'>OMGSwapV2Router02</Link>.
 </Info>
 
 # Code
 
-[`UniswapV2Router01.sol`](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol)
+[`OMGSwapV2Router01.sol`](https://github.com/OMGSwap/OMGSwap-v2-periphery/blob/master/contracts/OMGSwapV2Router01.sol)
 
 # Address
 
-`UniswapV2Router01` is deployed at `0xf164fC0Ec4E93095b804a4795bBe1e041497b92a` on the Ethereum [mainnet](https://etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), and the [Ropsten](https://ropsten.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), [Rinkeby](https://rinkeby.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), [Görli](https://goerli.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), and [Kovan](https://kovan.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a) testnets. It was built from commit [2ad7da2](https://github.com/Uniswap/uniswap-v2-periphery/tree/2ad7da28a6f70ec4299364bc1608af8f30e7646b).
+`OMGSwapV2Router01` is deployed at `0xf164fC0Ec4E93095b804a4795bBe1e041497b92a` on the Ethereum [mainnet](https://etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), and the [Ropsten](https://ropsten.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), [Rinkeby](https://rinkeby.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), [Görli](https://goerli.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a), and [Kovan](https://kovan.etherscan.io/address/0xf164fC0Ec4E93095b804a4795bBe1e041497b92a) testnets. It was built from commit [2ad7da2](https://github.com/OMGSwap/OMGSwap-v2-periphery/tree/2ad7da28a6f70ec4299364bc1608af8f30e7646b).
 
 # Read-Only Functions
 
@@ -404,13 +404,13 @@ See <Link to='/docs/v2/smart-contracts/library#getamountsin'>getAmountsIn</Link>
 # Interface
 
 ```solidity
-import '@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router01.sol';
+import '@OMGSwap/v2-periphery/contracts/interfaces/IOMGSwapV2Router01.sol';
 ```
 
 ```solidity
 pragma solidity >=0.6.2;
 
-interface IUniswapV2Router01 {
+interface IOMGSwapV2Router01 {
   function factory() external pure returns (address);
   function WETH() external pure returns (address);
 
@@ -508,7 +508,7 @@ interface IUniswapV2Router01 {
 # ABI
 
 ```typescript
-import IUniswapV2Router01 from '@uniswap/v2-periphery/build/IUniswapV2Router01.json'
+import IOMGSwapV2Router01 from '@OMGSwap/v2-periphery/build/IOMGSwapV2Router01.json'
 ```
 
-[https://unpkg.com/@uniswap/v2-periphery@1.0.0-beta.0/build/IUniswapV2Router01.json](https://unpkg.com/@uniswap/v2-periphery@1.0.0-beta.0/build/IUniswapV2Router01.json)
+[https://unpkg.com/@OMGSwap/v2-periphery@1.0.0-beta.0/build/IOMGSwapV2Router01.json](https://unpkg.com/@OMGSwap/v2-periphery@1.0.0-beta.0/build/IOMGSwapV2Router01.json)

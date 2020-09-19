@@ -17,14 +17,14 @@ Explore the sidebar to find more specific documentation covering other aspects o
 The OMGSwap codebase is comprised of an ecosystem of open source components.
 
 Ethereum Chain:
-- [`omgswap-v2-core`](https://github.com/omgswap/uniswap-v2-core)
-- [`omgswap-v2-periphery`](https://github.com/omgswap/uniswap-v2-periphery)
+- [`omgswap-v2-core`](https://github.com/omgswap/OMGSwap-v2-core)
+- [`omgswap-v2-periphery`](https://github.com/omgswap/OMGSwap-v2-periphery)
 - [`omgswap-frontend`](https://github.com/omgswap/omgswap-frontend)
 - [`omgswap-sdk`](https://github.com/omgswap/omgswap-sdk)
 
 Binance Smart Chain:
-- [`omgswap-v2-core`](https://github.com/omgswap/uniswap-v2-core)
-- [`omgswap-v2-periphery`](https://github.com/omgswap/uniswap-v2-periphery)
+- [`omgswap-v2-core`](https://github.com/omgswap/OMGSwap-v2-core)
+- [`omgswap-v2-periphery`](https://github.com/omgswap/OMGSwap-v2-periphery)
 - [`omgswap-frontend`](https://github.com/omgswap/omgswap-frontend)
 - [`omgswap-sdk`](https://github.com/omgswap/omgswap-bsc-sdk)
 

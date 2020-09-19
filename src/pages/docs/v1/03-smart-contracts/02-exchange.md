@@ -3,7 +3,7 @@ title: Exchange
 ---
 
 <Info>
-Uniswap V1, while still fully functional, is no longer under active development. Looking for <Link to='/docs/v2/'>V2 documentation</Link>?
+OMGSwap V1, while still fully functional, is no longer under active development. Looking for <Link to='/docs/v2/'>V2 documentation</Link>?
 </Info>
 
 # setup
@@ -766,7 +766,7 @@ exchangeContract.methods.factoryAddress().call()
 ```python
 # all exchange contracts have the same name
 @constant
-name(): bytes32 // Uniswap V1
+name(): bytes32 // OMGSwap V1
 ```
 
 ## Web3

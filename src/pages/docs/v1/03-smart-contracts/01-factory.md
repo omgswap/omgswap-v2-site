@@ -3,7 +3,7 @@ title: Factory
 ---
 
 <Info>
-  Uniswap V1, while still fully functional, is no longer under active development. Looking for <Link style={{ display: "contents" }} to='/docs/v2/'>V2 documentation</Link>?
+  OMGSwap V1, while still fully functional, is no longer under active development. Looking for <Link style={{ display: "contents" }} to='/docs/v2/'>V2 documentation</Link>?
 </Info>
 
 # initializeFactory
@@ -32,7 +32,7 @@ factoryContract.methods.initializeFactory(template).send()
 
 | Returns |                                        |
 | :------ | -------------------------------------: |
-| address | Ethereum address of a Uniswap exchange |
+| address | Ethereum address of a OMGSwap exchange |
 
 ## Smart Contract
 
@@ -54,7 +54,7 @@ factoryContract.methods.createExchange(token).send()
 
 | Returns |                                        |
 | :------ | -------------------------------------: |
-| address | Ethereum address of a Uniswap exchange |
+| address | Ethereum address of a OMGSwap exchange |
 
 ## Smart Contract
 
@@ -71,7 +71,7 @@ factoryContract.methods.getExchange(token).call()
 
 | Parameter | Type    |                            Description |
 | :-------- | :------ | -------------------------------------: |
-| exchange  | address | Ethereum address of a Uniswap exchange |
+| exchange  | address | Ethereum address of a OMGSwap exchange |
 
 | Returns |                                    |
 | :------ | ---------------------------------: |
@@ -94,7 +94,7 @@ factoryContract.methods.getToken(exchange).call()
 
 | Parameter | Type    |                   Description |
 | :-------- | :------ | ----------------------------: |
-| token_id  | uint256 | Uniswap ID for an ERC20 token |
+| token_id  | uint256 | OMGSwap ID for an ERC20 token |
 
 | Returns |                                    |
 | :------ | ---------------------------------: |

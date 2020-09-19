@@ -3,7 +3,7 @@ title: Getting Started
 tags: sdk, documentation
 ---
 
-The pages that follow contain technical reference information on the Uniswap SDK.
+The pages that follow contain technical reference information on the OMGSwap SDK.
 Looking for a <Link to='/docs/v2/javascript-SDK/quick-start'>quickstart</Link> instead? 
 You may also want to jump into a <Link to='/docs/v2/javascript-SDK/fetching-data'>guide</Link>, 
 which offers a friendlier introduction to the SDK!
@@ -27,11 +27,11 @@ The SDK works for all chains on which the <Link to='/docs/v2/smart-contracts/fac
 
 ## Code
 
-The [source code is available on GitHub](https://github.com/Uniswap/uniswap-sdk).
+The [source code is available on GitHub](https://github.com/OMGSwap/OMGSwap-sdk).
 
 ## Dependencies
 
-The SDK declares its dependencies as [peer dependencies](https://github.com/Uniswap/uniswap-sdk/blob/v2/package.json#L33).
+The SDK declares its dependencies as [peer dependencies](https://github.com/OMGSwap/OMGSwap-sdk/blob/v2/package.json#L33).
 This is for two reasons:
 
  - prevent installation of unused dependencies (e.g. `@ethersproject/providers` and `@ethersproject/contracts`, only used in [`Fetcher`](/docs/v2/SDK/fetcher))

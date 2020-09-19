@@ -7,11 +7,11 @@ Because routers are stateless and do not hold token balances, they can be replac
 
 # Code
 
-[`UniswapV2Router02.sol`](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol)
+[`OMGSwapV2Router02.sol`](https://github.com/OMGSwap/OMGSwap-v2-periphery/blob/master/contracts/OMGSwapV2Router02.sol)
 
 # Address
 
-`UniswapV2Router02` is deployed at `0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D` on the Ethereum [mainnet](https://etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), and the [Ropsten](https://ropsten.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), [Rinkeby](https://rinkeby.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), [Görli](https://goerli.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), and [Kovan](https://kovan.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D) testnets. It was built from commit [6961711](https://github.com/Uniswap/uniswap-v2-periphery/tree/69617118cda519dab608898d62aaa79877a61004).
+`OMGSwapV2Router02` is deployed at `0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D` on the Ethereum [mainnet](https://etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), and the [Ropsten](https://ropsten.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), [Rinkeby](https://rinkeby.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), [Görli](https://goerli.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D), and [Kovan](https://kovan.etherscan.io/address/0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D) testnets. It was built from commit [6961711](https://github.com/OMGSwap/OMGSwap-v2-periphery/tree/69617118cda519dab608898d62aaa79877a61004).
 
 # Read-Only Functions
 
@@ -530,13 +530,13 @@ See <Link to='/docs/v2/smart-contracts/library#getamountsin'>getAmountsIn</Link>
 # Interface
 
 ```solidity
-import '@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol';
+import '@OMGSwap/v2-periphery/contracts/interfaces/IOMGSwapV2Router02.sol';
 ```
 
 ```solidity
 pragma solidity >=0.6.2;
 
-interface IUniswapV2Router01 {
+interface IOMGSwapV2Router01 {
     function factory() external pure returns (address);
     function WETH() external pure returns (address);
 
@@ -630,7 +630,7 @@ interface IUniswapV2Router01 {
     function getAmountsIn(uint amountOut, address[] calldata path) external view returns (uint[] memory amounts);
 }
 
-interface IUniswapV2Router02 is IUniswapV2Router01 {
+interface IOMGSwapV2Router02 is IOMGSwapV2Router01 {
     function removeLiquidityETHSupportingFeeOnTransferTokens(
         address token,
         uint liquidity,
@@ -675,7 +675,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
 # ABI
 
 ```typescript
-import IUniswapV2Router02 from '@uniswap/v2-periphery/build/IUniswapV2Router02.json'
+import IOMGSwapV2Router02 from '@OMGSwap/v2-periphery/build/IOMGSwapV2Router02.json'
 ```
 
-[https://unpkg.com/@uniswap/v2-periphery@1.1.0-beta.0/build/IUniswapV2Router02.json](https://unpkg.com/@uniswap/v2-periphery@1.1.0-beta.0/build/IUniswapV2Router02.json)
+[https://unpkg.com/@OMGSwap/v2-periphery@1.1.0-beta.0/build/IOMGSwapV2Router02.json](https://unpkg.com/@OMGSwap/v2-periphery@1.1.0-beta.0/build/IOMGSwapV2Router02.json)

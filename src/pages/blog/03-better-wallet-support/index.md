@@ -3,12 +3,12 @@ title: 'Better Wallet Support'
 date: '2019-12-05'
 author: 'Callil Capuozzo'
 featuredImage: ./featured.jpg
-previewText: 'The Uniswap interface now supports a wide range of connection types including Wallet Connect!'
+previewText: 'The OMGSwap interface now supports a wide range of connection types including Wallet Connect!'
 ---
 
 ![](https://cdn-images-1.medium.com/max/5400/1*7wgRREUzm8paSw9ZrR4uYw.png)
 
-We’re improving wallet support on [app.uniswap.org](https://app.uniswap.org/swap). To start we’ve added support for:
+We’re improving wallet support on [app.OMGSwap.org](https://app.OMGSwap.org/swap). To start we’ve added support for:
 
 - [WalletConnect](https://walletconnect.org/)
 
@@ -28,9 +28,9 @@ You can also now dynamically switch between wallets through the account modal, w
 
 WalletConnect allows mobile wallets to connect to your desktop browser through a QR code and sign transactions. It even works on browsers such as Safari!
 
-Adding WalletConnect support allows wallets such as [Rainbow Wallet](https://rainbow.me/), [Gnosis Safe](https://safe.gnosis.io/) and [Argent Wallet](https://www.argent.xyz/) (coming soon) to connect to Uniswap for the first time. MetaMask mobile and Trust Wallet can also be used with wallet connect.
+Adding WalletConnect support allows wallets such as [Rainbow Wallet](https://rainbow.me/), [Gnosis Safe](https://safe.gnosis.io/) and [Argent Wallet](https://www.argent.xyz/) (coming soon) to connect to OMGSwap for the first time. MetaMask mobile and Trust Wallet can also be used with wallet connect.
 
-![Scan a QR code to connect your mobile wallet to app.uniswap.org](https://cdn-images-1.medium.com/max/1920/1*8A9MDGkWmQnPi8g0LtVndA.gif)
+![Scan a QR code to connect your mobile wallet to app.OMGSwap.org](https://cdn-images-1.medium.com/max/1920/1*8A9MDGkWmQnPi8g0LtVndA.gif)
 
 # WalletLink
 
@@ -50,8 +50,8 @@ This is all built on the new v6.0 release of the [web3-react library](https://gi
 
 ---
 
-Do you use another wallet that’s not supported yet? [Let us know.](http://contact@uniswap.org)
+Do you use another wallet that’s not supported yet? [Let us know.](http://contact@OMGSwap.org)
 
-Happy Holidays from the Uniswap team!
+Happy Holidays from the OMGSwap team!
 
 ❤

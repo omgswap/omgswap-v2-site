@@ -87,7 +87,7 @@ export default function Search(props) {
       try {
         window.docsearch({
           apiKey: '8962240e69e6d23a88432f501c115470',
-          indexName: 'uniswap_v2_docs',
+          indexName: 'OMGSwap_v2_docs',
           appId: 'VZ0CVS8XCW',
           inputSelector: '.docsearch', // the selector of my search input
           transformData: handleResults

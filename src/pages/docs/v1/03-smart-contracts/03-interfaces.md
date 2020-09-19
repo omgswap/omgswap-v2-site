@@ -3,7 +3,7 @@ title: Interfaces
 ---
 
 <Info>
-Uniswap V1, while still fully functional, is no longer under active development. Looking for <Link to='/docs/v2/'>V2 documentation</Link>?
+OMGSwap V1, while still fully functional, is no longer under active development. Looking for <Link to='/docs/v2/'>V2 documentation</Link>?
 </Info>
 
 # Factory
@@ -11,7 +11,7 @@ Uniswap V1, while still fully functional, is no longer under active development.
 ## Solidity
 
 ```solidity
-interface UniswapFactoryInterface {
+interface OMGSwapFactoryInterface {
     // Public Variables
     address public exchangeTemplate;
     uint256 public tokenCount;
@@ -29,7 +29,7 @@ interface UniswapFactoryInterface {
 ## Vyper
 
 ```python
-contract UniswapFactoryInterface():
+contract OMGSwapFactoryInterface():
     # Create Exchange
     def createExchange(token: address) -> address: modifying
     # Public Variables
@@ -48,10 +48,10 @@ contract UniswapFactoryInterface():
 ## Solidity
 
 ```solidity
-interface UniswapExchangeInterface {
+interface OMGSwapExchangeInterface {
     // Address of ERC20 token sold on this exchange
     function tokenAddress() external view returns (address token);
-    // Address of Uniswap Factory
+    // Address of OMGSwap Factory
     function factoryAddress() external view returns (address factory);
     // Provide Liquidity
     function addLiquidity(uint256 min_liquidity, uint256 max_tokens, uint256 deadline) external payable returns (uint256);
@@ -99,7 +99,7 @@ interface UniswapExchangeInterface {
 ## Vyper
 
 ```python
-contract UniswapExchangeInterface():
+contract OMGSwapExchangeInterface():
     # Public Variables
     def tokenAddress() -> address: constant
     def factoryAddress() -> address: constant
