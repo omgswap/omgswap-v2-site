@@ -259,6 +259,7 @@ const Header = props => {
         </StyledButton>
         {props.path !== undefined && <StyledTradeLink href="https://app.omgswap.com/" target="_blank">App</StyledTradeLink>}
         {props.path !== undefined && <StyledTradeLink href="https://bapp.omgswap.com/" target="_blank">bApp</StyledTradeLink>}
+        {props.path !== undefined && <StyledTradeLink href="https://omegaswap.com/" target="_blank">FlashSwap</StyledTradeLink>}
       </StyledNav>
     </StyledHeader>
   )

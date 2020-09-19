@@ -237,6 +237,7 @@ const IndexPage = props => {
           <span>
             <Button href="https://bapp.omgswap.com/" target="_blank" rel="noopener noreferrer">Binance OMGSwap bApp</Button>
             <Button href="https://app.omgswap.com/" target="_blank" rel="noopener noreferrer">Ethereum OMGSwap App</Button>
+            <Button href="https://omegaswap.com/" target="_blank" rel="noopener noreferrer">FlashSwap Full Liquidity</Button>
           </span>
         </StyledTitle>
         <SummarySection data={data} />
@@ -422,14 +423,14 @@ const SummarySection = props => {
       <h2>
         From November 2020 Every single DFI holder will get a reward from 2 million pDAI reward fund
       </h2>
-      <p>* Which will be distributed through smart contract for next 6 months.</p>
-      <p>* This reward system is differ from O-BOX [ Omega Staking Box Application ], a dapp built upon. </p>
-      <p>* Ethereum blockchain, run by couple of solidity smart contracts. </p>
-      <p>* Details will be published at https://omgswap.in </p>
-      <p>* DFI reward mechanism is a very simple but unique mechanism.</p>
-      <p>* DFI will minted once only 30,000 DFI & after that minter set to ZERO_ADDRESS.</p>
-      <p>* So DFI supply will remain fix forever.</p>
-      <p>* DFI is not a security but its tradable digital asset. </p>
+      <p>Which will be distributed through smart contract for next 6 months</p>
+      <p>This reward system is differ from O-BOX [ Omega Staking Box Application ]</p>
+      <p>O-BOX, build on top of Ethereum blockchain operated by smart contracts</p>
+      <p>Details will be published at https://omgswap.in/obox  soon</p>
+      <p>DFI reward mechanism is a very simple but unique mechanism</p>
+      <p>DFI will minted once only 30,000 DFI</p>
+      <p>DFI supply will remain fix forever</p>
+      <p>DFI is not a security, its tradable digital asset</p>
       <h2><Button href="https://uniswap.info/pair/0x8fc5ECE957f122362fbF994Ac97B546389f0Dc00" target="_blank" rel="noopener noreferrer"><b>DFIX Liquidity Pool</b></Button></h2>
       </CardFull>
       <CardFull>
@@ -467,6 +468,9 @@ const SummarySection = props => {
         <Button as={Link} outlined to="/">
           Read more
         </Button>
+         <span>
+          <Button href="https://omegaswap.com/" target="_blank" rel="noopener noreferrer">Use FlashSwap Full Liquidity</Button>
+          </span>
       </StyledImgSection>
         <Row>
           <ColS>
@@ -518,20 +522,30 @@ const SummarySection = props => {
 const DeveloperSection = () => {
   return (
     <>
-      <StyledSectionTitle>Build with OMGSwap</StyledSectionTitle>
+      <StyledSectionTitle>Build with OMGSwap
+       <p>
+          <span>
+          <Button href="https://omegaswap.com/" target="_blank" rel="noopener noreferrer">Use FlashSwap Full Liquidity</Button>
+          </span></p>
+     </StyledSectionTitle>
+        
       <StyledSectionFlex style={{ paddingBottom: '0px', paddingTop: '1rem' }}>
         <Wizard />
-          <Row>
-            <StyledSectionTitle style={{ paddingBottom: '0px', paddingTop: '1rem', width: '100%' }}>Connect with Omega Protocol</StyledSectionTitle>
-          <ColT>
+         <Row>
+         <p>
+            <StyledSectionTitle style={{ paddingBottom: '0.2rem', paddingTop: '1rem', paddingLeft: '26rem'}}>Connect with Omega
+        </StyledSectionTitle>
+           </p>  </Row> 
+               <Row>
+                 <ColT>
                 <img src={IConnect} alt="Connect" height="64"/>
                 <h1>Connect</h1>
                 <Button href="https://app.omgswap.com/" target="_blank" rel="noopener noreferrer"><b>App</b></Button><Button href="https://bapp.omgswap.com/" target="_blank" rel="noopener noreferrer"><b>bApp</b></Button>
                 <p>
                 Connect to a wallet (e.g. MetaMask, Coinbase Wallet)
                 </p>
-          </ColT>
-          <ColT>
+             </ColT>
+              <ColT>
                 <img src={IAdd} alt="Add" height="64"/>
                 <h1>Add Liquidity</h1>
                 <Button href="https://app.omgswap.com/#/pool" target="_blank" rel="noopener noreferrer"><b>App</b></Button><Button href="https://bapp.omgswap.com/#/pool" target="_blank" rel="noopener noreferrer"><b>bApp</b></Button>
@@ -547,6 +561,7 @@ const DeveloperSection = () => {
                   Claim fees from the Omega
                 </p>
           </ColT>
+               
           </Row>
           <Row>
             <ColT>
@@ -610,6 +625,9 @@ const DeveloperSection = () => {
               </Card>
             </ColT>
           </Row>
+           <span>
+          <Button href="https://omegaswap.com/" target="_blank" rel="noopener noreferrer">Use FlashSwap Full Liquidity</Button>
+          </span>
       </StyledSectionFlex>
     </>
   )
@@ -682,13 +700,16 @@ const ProductsSection = props => {
 
 const StyledGoal = styled.div`
   color: ${({ theme }) => theme.colors.link};
-  border-radius: 0.5rem;
+  border-radius: 6rem;
   p {
     line-height: 155%;
-    margin-bottom: 2rem;
+    margin-bottom: 6rem;
+    padding-bottom: 20px;
+    border-top: 2rem;
+    border-color: grey;
   }
   @media (max-width: 960px) {
-    margin-top: 2rem;
+    margin-top: 6rem;
     p {
       max-width: 100%;
     }
@@ -699,10 +720,11 @@ const GoalSection = () => {
   return (
     <StyledSectionFlex>
       <Row>
-    <StyledGoal style={{ width: '100%' }}>
-      <h1>Partnership</h1>
-      <p>Our exchange partnership</p>
+    <StyledGoal style={{ width: '100%', paddingBottom: '10px' }}>
+      <h1>Good Exchanges are our Partner</h1>
+        
     </StyledGoal>
+ 
         <ColT>
           <img src={Coinex} alt="Coinex" height="48"/>
         </ColT>
@@ -720,8 +742,11 @@ const GoalSection = () => {
         </ColT>
       </Row>
       <Row>
-    <StyledGoal style={{ width: '100%' }}>
+      <StyledGoal style={{ width: '100%', paddingBottom: '10px' }}>
+     <h1>Technology we are using now & soon we will adopt</h1>
+    
     </StyledGoal>
+
         <ColS>
           <h1>Deployment</h1>
           <p>Future Deployment with ❤️</p>

@@ -133,6 +133,10 @@ const Footer = () => {
         <StyledFooterSection>
           <EmailSection />
           <p>© 2018 - 2020 OMGSWAP.IN & Ǒmega Protocol Ltd.</p>
+ <StyledGoal style={{ width: '100%' }}>
+<RiskDisclaimer />
+ </StyledGoal>
+
           {/* <div>
             <label>
               <input type="checkbox" onChange={() => themeContext.toggleDark()} checked={themeContext.isDark} /> Dark
@@ -147,15 +151,17 @@ const Footer = () => {
             <StyledFooterSectionNav key={item.name}>
               <h4 style={{ fontWeight: 400, marginBottom: '1rem' }}>{item.name}</h4>
               <Dropdown links={item.sublinks} />
-            </StyledFooterSectionNav>
+             </StyledFooterSectionNav>
           )
+
         })}
+
       </StyledSection>
     </StyledFooter>
+
   )
 }
 export default Footer
-
 const EmailRow = styled.form`
   display: flex;
   flex-direction: row;
@@ -259,5 +265,15 @@ const EmailSection = () => {
       <p>Support: <a href="mailto:info@omgswap.in" target="_blank" rel="noopener noreferrer">info@omgswap.in</a></p>
       <p>UK Company Registered Number: <a href="https://beta.companieshouse.gov.uk/company/12855720" target="_blank" rel="noopener noreferrer">12855720</a></p>
     </StyledGoal>
-  )
+
+    )
+  }
+const RiskDisclaimer = () => {
+ return (
+<p>
+                Risk Disclaimer: Cryptocurrency asset is a kind of innovative investment product, with very volatile price. Established to provide convenience for all - new to old, ǑmegaSwap  & Ǒmega Protocol Ltd. only serves as a neutral trading platform. Please make accute judgement of your investment capability and make investment decision. OmegaSwap is strictly suggesting to the citizens of Bangladesh, Pakistan, Srilanka and USA not to invest in QPay ecosystem & any of its concern. OmegaSwap is a open source platform. Which is not a custodial service for assets. Trading access to or holding positions on ǑmegaSwap  & Ǒmega Protocol Ltd. is prohibited for any person that is located in or a resident of the United States of America, Québec (Canada), Cuba, Crimea and Sevastopol, Iran, Syria, North Korea, Sudan, or any other jurisdiction where the services offered by ǑmegaSwap  & Ǒmega Protocol Ltd. are restricted. If it is determined that any ǑmegaSwap  & Ǒmega Protocol Ltd. trading participant has given false representations as to their location or place of residence, ǑmegaSwap  & Ǒmega Protocol Ltd. reserves the right to close any of their accounts immediately and to liquidate any open positions. This material should not be the basis for making investment decisions, nor be construed as a recommendation to engage in investment transactions, and is not related to the provision of advisory services regarding investment, tax, legal, financial, accounting, consulting or any other related services, nor is a recommendation being provided to buy, sell or purchase any good or product. Any views expressed on ǑmegaSwap  & Ǒmega Protocol Ltd. Research reports are the personal views of the authors. ǑmegaSwap  & Ǒmega Protocol Ltd. (or any affiliated entity) has not been involved in producing this report and the views contained in the report may differ from the views or opinions of ǑmegaSwap  & Ǒmega Protocol Ltd.
+                * GnoSIS Web & GnoSIS Safe logo, trademark  belongs to GnoSIS. 
+                * AVA Labs logo, trademark belongs to AVA Labs Inc.
+              </p>
+)
 }
