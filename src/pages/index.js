@@ -20,7 +20,7 @@ import Coinex from '../images/partners/coinex.png'
 import Hotbit from '../images/partners/hotbit.png'
 import Probit from '../images/partners/probit.png'
 import Indoex from '../images/partners/indoex.png'
-import Uniswap from '../images/partners/uniwap.png'
+import Uniswap from '../images/partners/uniswap.png'
 
 const StyledBody = styled.div`
   position: relative;
