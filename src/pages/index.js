@@ -237,9 +237,6 @@ const IndexPage = props => {
           <span>
             <Button href="https://bapp.omgswap.com/" target="_blank" rel="noopener noreferrer">Binance OMGSwap bApp</Button>
             <Button href="https://app.omgswap.com/" target="_blank" rel="noopener noreferrer">Ethereum OMGSwap App</Button>
-            <Button href="https://exchange.omgswap.com/" as={Link} outlined>
-              Exchange (soon)
-            </Button>
           </span>
         </StyledTitle>
         <SummarySection data={data} />
@@ -368,8 +365,8 @@ const Card = styled.div`
     will-change: transform;
 `
 const CardFull = styled.div`
-  margin: 10px;
-  padding: 10px;
+  margin: 20px;
+  padding: 20px;
   color: ${({ theme }) => theme.textColor};
   background-color: ${({ theme }) => theme.cardBG};
   border: 1px solid ${({ theme }) => theme.colors.grey2};
@@ -401,10 +398,23 @@ const Row = styled.div`
       }
 `
 
+const RowLeft = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 100%;
+  @media screen and (max-width: 960px) {
+    margin: 0;
+      }
+`
+
 const SummarySection = props => {
   return (
     <StyledSectionFlex>
-    <Row>
+    <RowLeft>
       <CardFull>
       <h1>
         Omega Protocol Ltd. <b> DeFi Index Asset (DFIX)</b>
@@ -412,14 +422,15 @@ const SummarySection = props => {
       <h2>
         From November 2020 Every single DFI holder will get a reward from 2 million pDAI reward fund
       </h2>
-      <p>Which will be distributed through smart contract for next 6 months.</p>
-      <p>This reward system is differ from O-BOX [ Omega Staking Box Application ], a dapp built upon. </p>
-      <p>Ethereum blockchain, run by couple of solidity smart contracts. </p>
-      <p>Details will be published at https://omgswap.in </p>
-      <p>DFI reward mechanism is a very simple but unique mechanism.</p>
-      <p>DFI will minted once only 30,000 DFI & after that minter set to ZERO_ADDRESS.</p>
-      <p>So DFI supply will remain fix forever.</p>
-      <p>DFI is not a security but its tradable digital asset. </p>
+      <p>* Which will be distributed through smart contract for next 6 months.</p>
+      <p>* This reward system is differ from O-BOX [ Omega Staking Box Application ], a dapp built upon. </p>
+      <p>* Ethereum blockchain, run by couple of solidity smart contracts. </p>
+      <p>* Details will be published at https://omgswap.in </p>
+      <p>* DFI reward mechanism is a very simple but unique mechanism.</p>
+      <p>* DFI will minted once only 30,000 DFI & after that minter set to ZERO_ADDRESS.</p>
+      <p>* So DFI supply will remain fix forever.</p>
+      <p>* DFI is not a security but its tradable digital asset. </p>
+      <h2><Button href="https://uniswap.info/pair/0x8fc5ECE957f122362fbF994Ac97B546389f0Dc00" target="_blank" rel="noopener noreferrer"><b>DFIX Liquidity Pool</b></Button></h2>
       </CardFull>
       <CardFull>
       <h2>
@@ -429,9 +440,10 @@ const SummarySection = props => {
       <p>Supply: 30,000</p>
       <p>Contract: 0x88FBeCfeF7146242C18D26321b628E9FCa6B76dd</p>
       <p>Team allocation: 5%</p>
+      <Button href="https://app.uniswap.org/#/swap?inputCurrency=0x88fbecfef7146242c18d26321b628e9fca6b76dd&outputCurrency=ETH" target="_blank" rel="noopener noreferrer"><b>Buy DFIX</b></Button>
       </h2>
       </CardFull>
-    </Row>
+    </RowLeft>
       <StyledImgSection>
         <MiniNewInfo to="/blog/launch-omgswap-v2/">
           <StyledUnicornImage fadeIn={false} fluid={props.data.unicornImage.childImageSharp.fluid} />
