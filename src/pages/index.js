@@ -663,8 +663,6 @@ const GoalSection = () => {
       </Row>
       <Row>
     <StyledGoal style={{ width: '100%' }}>
-      <h1>Platform Partnership</h1>
-      <p>Our platform partnership</p>
     </StyledGoal>
         <ColS>
           <h1>Deployment</h1>

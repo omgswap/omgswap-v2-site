@@ -3,7 +3,7 @@
   "private": true,
   "description": "OMGSwap homepage and knowledgebase",
   "version": "0.1.0",
-  "author": "Callil Capuozzo <callil.capuozzo@gmail.com>",
+  "author": "Omega Protocol <info@omgswap.in>",
   "engines": {
     "node": "12.x"
   },
