@@ -208,6 +208,17 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  body::-webkit-scrollbar {
+    width: 8px;
+  }
 
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.2);
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
 
 `

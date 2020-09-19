@@ -37,7 +37,7 @@ const StyledFooter = styled.footer`
   @media (max-width: 960px) {
     margin-bottom: 2rem;
     flex-direction: column;
-    padding: 0rem 1rem;
+    padding: 1rem;
   }
 `
 
@@ -132,19 +132,7 @@ const Footer = () => {
       <StyledSection>
         <StyledFooterSection>
           <EmailSection />
-          <Commit>
-            Deployed commit:{' '}
-            <code>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={`${data.site.siteMetadata.repository}/commit/${data.site.siteMetadata.commit}`}
-              >
-                {data.site.siteMetadata.commit.substring(0, 7)}
-              </a>
-            </code>
-          </Commit>
-          <p>© 2020 Omega Protocol</p>
+          <p>© 2018 - 2020 OMGSWAP.IN & Ǒmega Protocol Ltd.</p>
           {/* <div>
             <label>
               <input type="checkbox" onChange={() => themeContext.toggleDark()} checked={themeContext.isDark} /> Dark
@@ -266,30 +254,10 @@ const EmailSection = () => {
     <StyledUni />
 
     <StyledWordmark />
-      <p>Ǒmega Protocol is Southeast Asian First DeFi Protocol Project</p>
-      <p>Subscribe to our newsletter for updates</p>
-
-      <EmailRow
-        action="https://uniswap.us19.list-manage.com/subscribe/post?u=c93471c1443f1e6365b5ca093&amp;id=7d591bff13"
-        method="post"
-        id="mc-embedded-subscribe-form"
-        name="mc-embedded-subscribe-form"
-        target="_blank"
-        novalidate
-      >
-        <StyledInput
-          type="email"
-          value={email}
-          name="EMAIL"
-          id="mce-EMAIL"
-          placeholder="your@email.com"
-          required
-          onChange={val => setEmail(val.target.value)}
-        />
-        <div>
-          <InputButton type="submit" value="->" name="subscribe" id="mc-embedded-subscribe" />
-        </div>
-      </EmailRow>
+      <p>Southeast Asian First DeFi Protocol Project</p>
+      <p>Address: 71-75 Shelton Street, London, Greater London, United Kingdom, WC2H 9JQ</p>
+      <p>Support: <a href="mailto:info@omgswap.in" target="_blank" rel="noopener noreferrer">info@omgswap.in</a></p>
+      <p>UK Company Registered Number: <a href="https://beta.companieshouse.gov.uk/company/12855720" target="_blank" rel="noopener noreferrer">12855720</a></p>
     </StyledGoal>
   )
 }

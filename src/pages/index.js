@@ -10,6 +10,12 @@ import MiniCard from '../components/minicard'
 import Wizard from '../components/wizard'
 import { Button } from '../components/button'
 import Discord from '../images/discord.inline.svg'
+import IConnect from '../images/icons/connect.svg'
+import IAdd from '../images/icons/add.svg'
+import IEarn from '../images/icons/earn.svg'
+import Ava from '../images/partners/ava.svg'
+import Gnosis from '../images/partners/gnosis.svg'
+import Gnosissafe from '../images/partners/gnosis-safe.svg'
 import Coinex from '../images/partners/coinex.png'
 import Hotbit from '../images/partners/hotbit.png'
 import Probit from '../images/partners/probit.png'
@@ -229,8 +235,8 @@ const IndexPage = props => {
           <StyledBodyTitle3>Omega Protocol is decentralized finance (Open finance) refers to the crypto (digital) assets and
           smart contracts, protocols, and decentralized application (dApp) built on Ethereum and Binance Smart Chain.</StyledBodyTitle3>
           <span>
-            <Button href="https://bapp.omgswap.com/" target="_blank">Binance OMGSwap bApp</Button>
-            <Button href="https://app.omgswap.com/" target="_blank">Ethereum OMGSwap App</Button>
+            <Button href="https://bapp.omgswap.com/" target="_blank" rel="noopener noreferrer">Binance OMGSwap bApp</Button>
+            <Button href="https://app.omgswap.com/" target="_blank" rel="noopener noreferrer">Ethereum OMGSwap App</Button>
             <Button to="/" as={Link} outlined>
               Read the docs
             </Button>
@@ -460,22 +466,25 @@ const DeveloperSection = () => {
           <Row>
             <StyledSectionTitle style={{ paddingBottom: '0px', paddingTop: '1rem', width: '100%' }}>Connect with Omega Protocol</StyledSectionTitle>
           <ColT>
+                <img src={IConnect} alt="Connect" height="64"/>
                 <h1>Connect</h1>
-                <Button href="https://app.omgswap.com/" target="_blank"><b>App</b></Button><Button href="https://bapp.omgswap.com/" target="_blank"><b>bApp</b></Button>
+                <Button href="https://app.omgswap.com/" target="_blank" rel="noopener noreferrer"><b>App</b></Button><Button href="https://bapp.omgswap.com/" target="_blank" rel="noopener noreferrer"><b>bApp</b></Button>
                 <p>
                 Connect to a wallet (e.g. MetaMask, Coinbase Wallet)
                 </p>
           </ColT>
           <ColT>
+                <img src={IAdd} alt="Add" height="64"/>
                 <h1>Add Liquidity</h1>
-                <Button href="https://app.omgswap.com/#/pool" target="_blank"><b>App</b></Button><Button href="https://bapp.omgswap.com/#/pool" target="_blank"><b>bApp</b></Button>
+                <Button href="https://app.omgswap.com/#/pool" target="_blank" rel="noopener noreferrer"><b>App</b></Button><Button href="https://bapp.omgswap.com/#/pool" target="_blank" rel="noopener noreferrer"><b>bApp</b></Button>
                 <p>
                   Add tokens liquidity pools
                 </p>
           </ColT>
           <ColT>
+                <img src={IEarn} alt="Earn" height="64"/>
                 <h1>Get Reward</h1>
-                <Button href="https://app.omgswap.com/" target="_blank"><b>App</b></Button><Button href="https://bapp.omgswap.com/" target="_blank"><b>bApp</b></Button>
+                <Button href="https://app.omgswap.com/" target="_blank" rel="noopener noreferrer"><b>App</b></Button><Button href="https://bapp.omgswap.com/" target="_blank" rel="noopener noreferrer"><b>bApp</b></Button>
                 <p>
                   Claim fees from the Omega
                 </p>
@@ -559,14 +568,14 @@ const ProductsSection2 = props => {
       </StyledSectionFlex>
       <StyledSectionFlex wrapSmall={false} style={{ paddingTop: '2rem' }}>
         <MiniCard
-          href="https://bapp.omgswap.com/" target="_blank"
+          href="https://bapp.omgswap.com/" target="_blank" rel="noopener noreferrer"
           image={props.data.swap.childImageSharp.fluid}
           desc={'OMGSwap bApp'}
           backgroundColor={'#DAA520'}
           color={'white'}
         />
         <MiniCard
-          href="http://info.omgswap.link/" target="_blank"
+          href="http://info.omgswap.link/" target="_blank" rel="noopener noreferrer"
           image={props.data.socks.childImageSharp.fluid}
           desc={'bApp Analytics'}
           backgroundColor={'#DAA520'}
@@ -588,21 +597,21 @@ const ProductsSection = props => {
       </StyledSectionFlex>
       <StyledSectionFlex wrapSmall={false} style={{ paddingTop: '2rem' }}>
         <MiniCard
-          href="https://app.omgswap.com/" target="_blank"
+          href="https://app.omgswap.com/" target="_blank" rel="noopener noreferrer"
           image={props.data.swap.childImageSharp.fluid}
           desc={'OMGSwap App'}
           backgroundColor={'#009685'}
           color={'white'}
         />
         <MiniCard
-          href="https://odex.link" target="_blank"
+          href="https://odex.link" target="_blank" rel="noopener noreferrer"
           image={props.data.info.childImageSharp.fluid}
           desc={'Omega Exchange'}
           backgroundColor={'#009685'}
           color={'white'}
         />
         <MiniCard
-          href="https://omgswap.link/" target="_blank"
+          href="https://omgswap.link/" target="_blank" rel="noopener noreferrer"
           image={props.data.socks.childImageSharp.fluid}
           desc={'App Analytics'}
           backgroundColor={'#009685'}
@@ -637,20 +646,38 @@ const GoalSection = () => {
       <p>Our exchange partnership</p>
     </StyledGoal>
         <ColT>
-        <img src={Coinex} alt="Coinex" height="48"/>
+          <img src={Coinex} alt="Coinex" height="48"/>
         </ColT>
         <ColT>
-        <img src={Hotbit} alt="Hotbit" height="48"/>
+          <img src={Hotbit} alt="Hotbit" height="48"/>
         </ColT>
         <ColT>
-        <img src={Probit} alt="Probit" height="48"/>
+          <img src={Probit} alt="Probit" height="48"/>
         </ColT>
         <ColT>
-        <img src={Indoex} alt="Indoex" height="48"/>
+          <img src={Indoex} alt="Indoex" height="48"/>
         </ColT>
         <ColT>
-        <img src={Uniswap} alt="Uniswap" height="48"/>
+          <img src={Uniswap} alt="Uniswap" height="48"/>
         </ColT>
+      </Row>
+      <Row>
+    <StyledGoal style={{ width: '100%' }}>
+      <h1>Platform Partnership</h1>
+      <p>Our platform partnership</p>
+    </StyledGoal>
+        <ColS>
+          <h1>Deployment</h1>
+          <p>Future Deployment with ❤️</p>
+          <img src={Ava} alt="Ava" height="96"/>
+        </ColS>
+        <ColS>
+          <h1>Wallet</h1>
+          <p>Powered by</p>
+          <p><img src={Gnosis} alt="Gnosis" height="32"/></p>
+          <p>Secured by</p>
+          <p><img src={Gnosissafe} alt="Gnosissafe" height="32"/></p>
+        </ColS>
       </Row>
     </StyledSectionFlex>
   )
