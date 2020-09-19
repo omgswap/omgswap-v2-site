@@ -237,8 +237,8 @@ const IndexPage = props => {
           <span>
             <Button href="https://bapp.omgswap.com/" target="_blank" rel="noopener noreferrer">Binance OMGSwap bApp</Button>
             <Button href="https://app.omgswap.com/" target="_blank" rel="noopener noreferrer">Ethereum OMGSwap App</Button>
-            <Button to="/" as={Link} outlined>
-              Read the docs
+            <Button href="https://exchange.omgswap.com/" as={Link} outlined>
+              Exchange (soon)
             </Button>
           </span>
         </StyledTitle>

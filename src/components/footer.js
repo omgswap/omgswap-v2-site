@@ -250,7 +250,7 @@ const EmailSection = () => {
   const [email, setEmail] = useState('')
 
   return (
-    <StyledGoal style={{ width: '100%', maxWidth: '450px' }}>
+    <StyledGoal style={{ width: '100%' }}>
     <StyledUni />
 
     <StyledWordmark />
