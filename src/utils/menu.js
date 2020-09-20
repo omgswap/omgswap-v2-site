@@ -69,6 +69,7 @@ const menu = [
     sublinks: [
       { name: 'Twitter', link: 'https://twitter.com/omegadefi' },
       { name: 'Telegram', link: 'https://t.me/omegadefi' },
+      { name: 'Discord', link: 'https://discord.gg/cFysPu' },
       { name: 'Reddit', link: 'https://www.reddit.com/r/omegaprotocol/' },
       { name: 'LinkedIn', link: 'https://www.linkedin.com/company/opldefi' }
     ]

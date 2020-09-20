@@ -245,6 +245,15 @@ const About = props => {
                 title={'Telegram'}
                 small
                 image={data.discord.childImageSharp.fluid}
+                desc={'Chat with traders.'}
+                color={'white'}
+                backgroundColor={'#7289da'}
+              />
+              <MiniCard
+                href="https://discord.gg/cFysPu"
+                title={'Discord'}
+                small
+                image={data.discord.childImageSharp.fluid}
                 desc={'Real time discussion.'}
                 color={'white'}
                 backgroundColor={'#7289da'}
