@@ -27,7 +27,7 @@ function SEO({ description, lang, title, path }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  const uniTitle = 'Omega Protocol | OMGSwap | ' + title
+  const uniTitle = 'Omega Protocol | ' + title
 
   return (
     <Helmet

@@ -224,7 +224,7 @@ const IndexPage = props => {
     <Layout path={props.location.pathname}>
       <BG />
       <SEO
-        title="Home"
+        title="Omega Protocol | BSC BEP20 Swap | ERC20 Tokens"
         path={props.location.pathname}
         description={'Omega Protocol is decentralized finance (Open finance) refers to the crypto (digital) assets and smart contracts, protocols, and decentralized application (dApp) built on Ethereum and Binance Smart Chain'}
       />
@@ -528,24 +528,23 @@ const DeveloperSection = () => {
           <Button href="https://omegaswap.com/" target="_blank" rel="noopener noreferrer">Use FlashSwap Full Liquidity</Button>
           </span></p>
      </StyledSectionTitle>
-        
+
       <StyledSectionFlex style={{ paddingBottom: '0px', paddingTop: '1rem' }}>
         <Wizard />
-         <Row>
          <p>
-            <StyledSectionTitle style={{ paddingBottom: '0.2rem', paddingTop: '1rem', paddingLeft: '26rem'}}>Connect with Omega
-        </StyledSectionTitle>
-           </p>  </Row> 
-               <Row>
-                 <ColT>
+          <StyledSectionTitle style={{ paddingBottom: '0.2rem', paddingTop: '1rem', textAlign: 'center'}}>Connect with Omega
+          </StyledSectionTitle>
+        </p>
+        <Row>
+          <ColT>
                 <img src={IConnect} alt="Connect" height="64"/>
                 <h1>Connect</h1>
                 <Button href="https://app.omgswap.com/" target="_blank" rel="noopener noreferrer"><b>App</b></Button><Button href="https://bapp.omgswap.com/" target="_blank" rel="noopener noreferrer"><b>bApp</b></Button>
                 <p>
                 Connect to a wallet (e.g. MetaMask, Coinbase Wallet)
                 </p>
-             </ColT>
-              <ColT>
+          </ColT>
+          <ColT>
                 <img src={IAdd} alt="Add" height="64"/>
                 <h1>Add Liquidity</h1>
                 <Button href="https://app.omgswap.com/#/pool" target="_blank" rel="noopener noreferrer"><b>App</b></Button><Button href="https://bapp.omgswap.com/#/pool" target="_blank" rel="noopener noreferrer"><b>bApp</b></Button>
@@ -561,8 +560,7 @@ const DeveloperSection = () => {
                   Claim fees from the Omega
                 </p>
           </ColT>
-               
-          </Row>
+        </Row>
           <Row>
             <ColT>
               <Card>
@@ -722,9 +720,9 @@ const GoalSection = () => {
       <Row>
     <StyledGoal style={{ width: '100%', paddingBottom: '10px' }}>
       <h1>Good Exchanges are our Partner</h1>
-        
+
     </StyledGoal>
- 
+
         <ColT>
           <img src={Coinex} alt="Coinex" height="48"/>
         </ColT>
@@ -744,7 +742,7 @@ const GoalSection = () => {
       <Row>
       <StyledGoal style={{ width: '100%', paddingBottom: '10px' }}>
      <h1>Technology we are using now & soon we will adopt</h1>
-    
+
     </StyledGoal>
 
         <ColS>
