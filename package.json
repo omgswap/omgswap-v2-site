@@ -2,7 +2,8 @@
   "name": "@omgswap/omgswap-v2-site",
   "private": true,
   "description": "OMGSwap homepage and knowledgebase",
-  "version": "0.1.0",
+  "version": "0.1.1",
+  "homepage": "https://omgswap.in",
   "author": "Omega Protocol <info@omgswap.in>",
   "engines": {
     "node": "12.x"
