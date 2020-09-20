@@ -365,7 +365,7 @@ const DeveloperSection = () => {
           <ColT>
                 <img src={IEarn} alt="Earn" height="64"/>
                 <h1>pDAI Reward</h1>
-                <Button href="https://omgswap.com/obox" target="_blank" rel="noopener noreferrer"><b>Get Reward</b></Button>
+                <Button href="https://omgswap.in/obox" target="_blank" rel="noopener noreferrer"><b>Get Reward</b></Button>
                 <p>
                   Claim pDAI for DFIX Holders
                 </p>
