@@ -1,5 +1,5 @@
 import { Link } from 'gatsby'
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import Uni from '../images/uni.inline.svg'
@@ -102,14 +102,12 @@ const StyledFooterLink = styled.li`
   }
 `
 
-const Commit = styled.div``
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
     {
       site {
         siteMetadata {
-          commit
           repository
           menulinks {
             name
@@ -162,61 +160,6 @@ const Footer = () => {
   )
 }
 export default Footer
-const EmailRow = styled.form`
-  display: flex;
-  flex-direction: row;
-`
-
-const InputButton = styled.input`
-  padding: 0.25rem 0.75rem;
-  background-color: ${({ theme }) => theme.colors.link};
-  text-decoration: none;
-  color: ${({ theme }) => theme.invertedTextColor};
-  border-radius: 12px;
-  margin-right: 0.5rem;
-  display: inline-block;
-  transform: scale(0.98);
-  transition: transform 0.25s ease;
-  box-sizing: border-box;
-  font-weight: 400;
-  border: none;
-
-  :hover {
-    transform: scale(1);
-    cursor: pointer;
-  }
-  @media (max-width: 960px) {
-    margin-right: 0.5rem;
-    text-align: center;
-    text-decoration: none;
-    font-size: 0.825rem;
-    padding: 0.25rem 1rem;
-  }
-
-  outline-color: transparent;
-  outline-style: none;
-`
-
-const StyledInput = styled.input`
-  border-radius: 8px;
-  margin-right: 10px;
-  box-shadow: none;
-  background-image: none;
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  border: 1px solid ${({ theme }) => theme.chaliceGray};
-  max-width: 280px;
-
-  padding: 4px 0 4px 10px;
-
-  :focus {
-    outline-color: transparent;
-    outline-style: none;
-    border: 1px solid ${({ theme }) => theme.colors.link};
-  }
-`
 
 const StyledUni = styled(Uni)`
   path {
@@ -253,7 +196,6 @@ const StyledGoal = styled.div`
 `
 
 const EmailSection = () => {
-  const [email, setEmail] = useState('')
 
   return (
     <StyledGoal style={{ width: '100%' }}>
@@ -272,7 +214,7 @@ const RiskDisclaimer = () => {
  return (
 <p>
                 Risk Disclaimer: Cryptocurrency asset is a kind of innovative investment product, with very volatile price. Established to provide convenience for all - new to old, ǑmegaSwap  & Ǒmega Protocol Ltd. only serves as a neutral trading platform. Please make accute judgement of your investment capability and make investment decision. OmegaSwap is strictly suggesting to the citizens of Bangladesh, Pakistan, Srilanka and USA not to invest in QPay ecosystem & any of its concern. OmegaSwap is a open source platform. Which is not a custodial service for assets. Trading access to or holding positions on ǑmegaSwap  & Ǒmega Protocol Ltd. is prohibited for any person that is located in or a resident of the United States of America, Québec (Canada), Cuba, Crimea and Sevastopol, Iran, Syria, North Korea, Sudan, or any other jurisdiction where the services offered by ǑmegaSwap  & Ǒmega Protocol Ltd. are restricted. If it is determined that any ǑmegaSwap  & Ǒmega Protocol Ltd. trading participant has given false representations as to their location or place of residence, ǑmegaSwap  & Ǒmega Protocol Ltd. reserves the right to close any of their accounts immediately and to liquidate any open positions. This material should not be the basis for making investment decisions, nor be construed as a recommendation to engage in investment transactions, and is not related to the provision of advisory services regarding investment, tax, legal, financial, accounting, consulting or any other related services, nor is a recommendation being provided to buy, sell or purchase any good or product. Any views expressed on ǑmegaSwap  & Ǒmega Protocol Ltd. Research reports are the personal views of the authors. ǑmegaSwap  & Ǒmega Protocol Ltd. (or any affiliated entity) has not been involved in producing this report and the views contained in the report may differ from the views or opinions of ǑmegaSwap  & Ǒmega Protocol Ltd.
-                * GnoSIS Web & GnoSIS Safe logo, trademark  belongs to GnoSIS. 
+                * GnoSIS Web & GnoSIS Safe logo, trademark  belongs to GnoSIS.
                 * AVA Labs logo, trademark belongs to AVA Labs Inc.
               </p>
 )
