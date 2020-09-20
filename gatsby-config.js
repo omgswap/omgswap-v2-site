@@ -10,7 +10,7 @@ module.exports = {
     description: `Southeast Asian First DeFi Protocol Project automated LP based on Ethereum and Binance Smart Chain`,
     author: `@omegadefi`,
     menulinks: menu,
-    siteUrl: `https://omgswap.com`,
+    siteUrl: `https://omgswap.in`,
     repository: `https://github.com/omgswap/omgswap-v2-site`,
     commit: process.env.NOW_GITHUB_COMMIT_SHA || `master`
   },
@@ -20,14 +20,14 @@ module.exports = {
       options: {
         bucketName: 'my-website-bucket',
         protocol: 'https',
-        hostname: 'omgswap.com',
+        hostname: 'omgswap.in',
         acl: null
       },
     },
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://omgswap.com`,
+        siteUrl: `https://omgswap.in`,
       },
     },
     {
@@ -140,7 +140,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/fav.ico` // This path is relative to the root of the site.
+        icon: `./src/images/fav.ico` // This path is relative to the root of the site.
       }
     },
     {

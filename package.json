@@ -6,7 +6,7 @@
   "homepage": "https://omgswap.in",
   "author": "Omega Protocol <info@omgswap.in>",
   "engines": {
-    "node": "12.x"
+    "node": "12.18.3"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.3",
