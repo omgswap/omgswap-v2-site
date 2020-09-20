@@ -531,10 +531,8 @@ const DeveloperSection = () => {
 
       <StyledSectionFlex style={{ paddingBottom: '0px', paddingTop: '1rem' }}>
         <Wizard />
-         <p>
-          <StyledSectionTitle style={{ paddingBottom: '0.2rem', paddingTop: '1rem', textAlign: 'center'}}>Connect with Omega
+          <StyledSectionTitle style={{ paddingBottom: '0.2rem', paddingTop: '1rem', textAlign: 'center', width: '100%'}}>Connect with Omega
           </StyledSectionTitle>
-        </p>
         <Row>
           <ColT>
                 <img src={IConnect} alt="Connect" height="64"/>
