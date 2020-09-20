@@ -6,6 +6,7 @@ import SEO from '../../components/seo'
 import Ticker from '../../components/ticker'
 import BG from '../../components/bg'
 import { Button } from '../../components/button'
+import Dfix from '../../images/logos/dfix.png'
 import Discord from '../../images/discord.inline.svg'
 import IConnect from '../../images/icons/connect.svg'
 import IAdd from '../../images/icons/add.svg'
@@ -306,6 +307,18 @@ const SummarySection = props => {
   return (
     <StyledSectionFlex>
     <RowLeft>
+        <CardFull>
+        <h2>
+          <p><img src={Dfix} alt="DFIX Logo" height="150"/></p>
+          <p><b>Name:</b> DeFi Index</p>
+          <p><b>Ticker:</b> DFIX</p>
+          <p><b>Decimal:</b> 18</p>
+          <p><b>Supply:</b> 30,000</p>
+          <p><b>Contract:</b> <a href="https://etherscan.io/token/0x88FBeCfeF7146242C18D26321b628E9FCa6B76dd" target="_blank" rel="noopener noreferrer">0x88FBeCfeF7146242C18D26321b628E9FCa6B76dd</a></p>
+          <p><b>Team allocation:</b> 5%</p>
+          <Button href="https://app.uniswap.org/#/swap?inputCurrency=0x88fbecfef7146242c18d26321b628e9fca6b76dd&outputCurrency=ETH" target="_blank" rel="noopener noreferrer"><b>Buy DFIX</b></Button>
+        </h2>
+      </CardFull>
       <CardFull>
       <h1>
         <b> Omega Staking Box Application</b> DFIX Reward System is differ from O-BOX
@@ -318,17 +331,6 @@ const SummarySection = props => {
       <p>DFI is not a security, its tradable digital asset</p>
       <h2><Button href="https://uniswap.info/pair/0x8fc5ECE957f122362fbF994Ac97B546389f0Dc00" target="_blank" rel="noopener noreferrer"><b>DFIX Liquidity Pool</b></Button></h2>
       </CardFull>
-      <CardFull>
-      <h2>
-      <p>Decimal: 18</p>
-      <p>Name: DeFi Index</p>
-      <p>Ticker: DFIX</p>
-      <p>Supply: 30,000</p>
-      <p>Contract: 0x88FBeCfeF7146242C18D26321b628E9FCa6B76dd</p>
-      <p>Team allocation: 5%</p>
-      <Button href="https://app.uniswap.org/#/swap?inputCurrency=0x88fbecfef7146242c18d26321b628e9fca6b76dd&outputCurrency=ETH" target="_blank" rel="noopener noreferrer"><b>Buy DFIX</b></Button>
-      </h2>
-      </CardFull>
     </RowLeft>
     </StyledSectionFlex>
   )
@@ -337,7 +339,6 @@ const SummarySection = props => {
 const DeveloperSection = () => {
   return (
     <>
-
       <StyledSectionFlex style={{ paddingBottom: '0px', paddingTop: '1rem' }}>
       <StyledSectionTitle>Get DFIX Rewards
        <p>

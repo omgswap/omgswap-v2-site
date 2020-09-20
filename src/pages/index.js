@@ -9,6 +9,7 @@ import BG from '../components/bg'
 import MiniCard from '../components/minicard'
 import Wizard from '../components/wizard'
 import { Button } from '../components/button'
+import Dfix from '../images/logos/dfix.png'
 import Discord from '../images/discord.inline.svg'
 import IConnect from '../images/icons/connect.svg'
 import IAdd from '../images/icons/add.svg'
@@ -224,9 +225,9 @@ const IndexPage = props => {
     <Layout path={props.location.pathname}>
       <BG />
       <SEO
-        title="Omega Protocol | BSC BEP20 Swap | ERC20 Tokens"
+        title="Omega Protocol | BSC BEP20, ERC20 Token Swap"
         path={props.location.pathname}
-        description={'Omega Protocol is decentralized finance (Open finance) refers to the crypto (digital) assets and smart contracts, protocols, and decentralized application (dApp) built on Ethereum and Binance Smart Chain'}
+        description={'Omega Protocol, OMGSwap, Omega DeFi, dApp, DEX, bApp, ETH Ethereum ERC20 Token, BNB Binance Smart Chain BSC BEP20 Swap, OmegaSwap, OPM, pDAI, DFIX'}
       />
       <StyledBody>
         <StyledTitle>
@@ -380,9 +381,12 @@ const CardFull = styled.div`
     overflow: hidden;
     position: relative;
     display: flex;
-    flex-direction: column;
     transition: transform 0.3s ease;
     will-change: transform;
+    @media screen and (max-width: 960px) {
+      margin: 0;
+      flex-direction: column;
+        }
 `
 const Row = styled.div`
   display: flex;
@@ -416,34 +420,23 @@ const SummarySection = props => {
   return (
     <StyledSectionFlex>
     <RowLeft>
-      <CardFull>
+    <CardFull>
+    <ColS>
+      <p><img src={Dfix} alt="DFIX Logo" height="360"/></p>
+    </ColS>
+    <ColS>
       <h1>
         Omega Protocol Ltd. <b> DeFi Index Asset (DFIX)</b>
       </h1>
-      <h2>
-        From November 2020 Every single DFI holder will get a reward from 2 million pDAI reward fund
-      </h2>
-      <p>Which will be distributed through smart contract for next 6 months</p>
-      <p>This reward system is differ from O-BOX [ Omega Staking Box Application ]</p>
-      <p>O-BOX, build on top of Ethereum blockchain operated by smart contracts</p>
-      <p>Details will be published at https://omgswap.in/obox  soon</p>
-      <p>DFI reward mechanism is a very simple but unique mechanism</p>
-      <p>DFI will minted once only 30,000 DFI</p>
-      <p>DFI supply will remain fix forever</p>
-      <p>DFI is not a security, its tradable digital asset</p>
-      <h2><Button href="https://uniswap.info/pair/0x8fc5ECE957f122362fbF994Ac97B546389f0Dc00" target="_blank" rel="noopener noreferrer"><b>DFIX Liquidity Pool</b></Button></h2>
-      </CardFull>
-      <CardFull>
-      <h2>
       <p>Decimal: 18</p>
       <p>Name: DeFi Index</p>
       <p>Ticker: DFIX</p>
       <p>Supply: 30,000</p>
       <p>Contract: 0x88FBeCfeF7146242C18D26321b628E9FCa6B76dd</p>
       <p>Team allocation: 5%</p>
-      <Button href="https://app.uniswap.org/#/swap?inputCurrency=0x88fbecfef7146242c18d26321b628e9fca6b76dd&outputCurrency=ETH" target="_blank" rel="noopener noreferrer"><b>Buy DFIX</b></Button>
-      </h2>
-      </CardFull>
+      <Button href="/obox" target="_blank" rel="noopener noreferrer"><b>Get DFIX Reward</b></Button>
+    </ColS>
+    </CardFull>
     </RowLeft>
       <StyledImgSection>
         <MiniNewInfo to="/blog/launch-omgswap-v2/">
