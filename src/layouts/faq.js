@@ -88,69 +88,13 @@ const StyledPageTitle = styled.div`
 `
 
 const Docs = props => {
-  const data = useStaticQuery(graphql`
-    {
-      allMdx(filter: { fileAbsolutePath: { regex: "/faq/" } }, sort: {}) {
-        edges {
-          node {
-            headings {
-              value
-              depth
-            }
-            frontmatter {
-              title
-            }
-            fields {
-              slug
-              subDir
-              rawSlug
-              parentDir
-            }
-            id
-          }
-        }
-      }
-    }
-  `)
 
   return (
     <Layout path={props.location.pathname} isDocs={false}>
       <BG />
       <SEO title={props.pageContext.frontmatter.title} path={props.location.pathname} />
       <GlobalStyle />
-      {data.allMdx.edges
-        .filter(({ node }) => {
-          return node.fields.slug === props.path
-        })
-        .map(({ node }) => {
-          const title = node.fields.subDir
-            .replace(/\d+-/g, '')
-            .replace(/-/g, ' ')
-            .replace(/(^|\s)\S/g, function(t) {
-              return t.toUpperCase()
-            })
-          return (
-            <SEO
-              key={node.fields.slug}
-              title={props.pageContext.frontmatter.title}
-              site={'OMGSwap ' + title}
-              path={props.location.pathname}
-              description={node.excerpt}
-            />
-          )
-        })}
       <StyledDocs id="docs-header">
-        {data ? (
-          data.allMdx.edges
-            .filter(({ node }) => {
-              return node.fields.slug === props.path
-            })
-            .map(({ node }) => {
-              return <Sidebar path={props.path} key={node.id} headings={node.headings} />
-            })
-        ) : (
-          <div style={{ width: '160px', height: '60px' }}></div>
-        )}
         <StyledMDX>
           <StyledPageTitle>
             <h1>{props.pageContext.frontmatter.title}</h1>
