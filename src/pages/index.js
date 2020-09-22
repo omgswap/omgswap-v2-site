@@ -9,7 +9,6 @@ import BG from '../components/bg'
 import MiniCard from '../components/minicard'
 import Wizard from '../components/wizard'
 import { Button } from '../components/button'
-import Dfix from '../images/logos/dfix.png'
 import Discord from '../images/discord.inline.svg'
 import IConnect from '../images/icons/connect.svg'
 import IAdd from '../images/icons/add.svg'
@@ -148,7 +147,7 @@ const StyledUnicornImage = styled(Img)`
 `
 
 const StyledSectionFlex = styled.div`
-  padding: 4rem 0;
+  padding: 2rem 0;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -419,25 +418,6 @@ const RowLeft = styled.div`
 const SummarySection = props => {
   return (
     <StyledSectionFlex>
-    <RowLeft>
-    <CardFull>
-    <ColS>
-      <p><img src={Dfix} alt="DFIX Logo" height="360"/></p>
-    </ColS>
-    <ColS>
-      <h1>
-        Omega Protocol Ltd. <b> DeFi Index Asset (DFIX)</b>
-      </h1>
-      <p>Decimal: 18</p>
-      <p>Name: DeFi Index</p>
-      <p>Ticker: DFIX</p>
-      <p>Supply: 30,000</p>
-      <p>Contract: 0x88FBeCfeF7146242C18D26321b628E9FCa6B76dd</p>
-      <p>Team allocation: 5%</p>
-      <Button href="/obox" target="_blank" rel="noopener noreferrer"><b>Get DFIX Reward</b></Button>
-    </ColS>
-    </CardFull>
-    </RowLeft>
       <StyledImgSection>
         <MiniNewInfo to="/blog/launch-omgswap-v2/">
           <StyledUnicornImage fadeIn={false} fluid={props.data.unicornImage.childImageSharp.fluid} />
@@ -515,6 +495,24 @@ const SummarySection = props => {
 const DeveloperSection = () => {
   return (
     <>
+    <StyledSectionFlex>
+    <RowLeft style={{ textAlign: 'center', width: '100%'}}>
+    <CardFull>
+    <ColS>
+      <h1>
+        <b>Omega Staking Box Application </b>
+      </h1>
+      <p>OmegaBOX, build on top of Ethereum blockchain operated by smart contracts</p>
+    </ColS>
+    <ColS>
+      <Button href="/obox" target="_blank" rel="noopener noreferrer"><b>OmegaBOX (Soon)</b></Button>
+      <br />
+      <Button href="https://omgswap.link/pair/0x928cf52d5d45ec7deff26b69d38de7da1bb3033e" target="_blank" rel="noopener noreferrer"><b>OMGSwap</b></Button>
+      <Button href="https://uniswap.info/pair/0x8fc5ECE957f122362fbF994Ac97B546389f0Dc00" target="_blank" rel="noopener noreferrer"><b>Uniswap</b></Button>
+    </ColS>
+    </CardFull>
+    </RowLeft>
+    </StyledSectionFlex>
       <StyledSectionTitle>Build with OMGSwap
        <p>
           <span>

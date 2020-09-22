@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:#FFFFFF;}
+</style>
+<g id="bg">
+	<g>
+		
+			<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="256" y1="8" x2="256" y2="508" gradientTransform="matrix(1 0 0 -1 0 514)">
+			<stop  offset="0" style="stop-color:#009685"/>
+			<stop  offset="1" style="stop-color:#00B298"/>
+		</linearGradient>
+		<path class="st0" d="M356,506H156C73.3,506,6,438.7,6,356V156C6,73.3,71.4,6,156,6h200c82.7,0,150,67.3,150,150v200
+			C506,438.7,438.7,506,356,506z"/>
+	</g>
+</g>
+<g id="Omega_1_">
+	<g>
+		<g>
+			<path id="O_1_" class="st1" d="M113.7,300.2c0-103.8,59.6-165.4,140.4-165.4s140.4,63.5,140.4,165.4s-57.7,167.3-140.4,167.3
+				S113.7,404.1,113.7,300.2z M340.6,300.2c0-71.2-32.7-115.4-84.6-115.4s-84.6,42.3-84.6,115.4s32.7,117.3,84.6,117.3
+				S340.6,371.4,340.6,300.2z"/>
+			<path id="mega_1_" class="st1" d="M319.5,42.5L256,86.8l-63.5-44.2h-13.5v7.7l51.9,65.4h50l51.9-65.4v-7.7H319.5z"/>
+		</g>
+	</g>
+</g>
+</svg>
